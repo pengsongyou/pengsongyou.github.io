@@ -58,7 +58,7 @@
         background-color: #ffffd0;
     }
   </style>
-  <link rel="icon" type="image/png" href="media/bw_headshot_favicon.png">
+  <link rel="icon" type="image/png" href="media/color_headshot_favicon.png">
   <title>Ruth C. Fong</title>
   <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -68,6 +68,7 @@
     <tr>
     <td>
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <!--<tr onmouseout="headshot_stop()" onmouseover="headshot_start()">-->
       <tr>
         <td width="67%" valign="middle">
         <p align="center">
@@ -91,8 +92,25 @@
         </p>
         </td>
         <td width="33%">
-        <img src="media/bw_headshot.png" width="250">
+          <img src="media/color_headshot.png" width="250" alt="headshot">
+          <!--<div class="one">
+          <div class="two" id="headshot_image"><img src="media/color_headshot.png" width="250" alt="headshot"></div>
+          <img src="media/bw_headshot.png" width="250" alt="headshot">
+          </div>
+          <script type="text/javascript">
+          function headshot_start() {
+          document.getElementById('headshot_image').style.opacity = "1";
+          }
+          function headshot_stop() {
+          document.getElementById('headshot_image').style.opacity = "0";
+          }
+          filters_stop()
+          </script>-->
         </td>
+        <!--<td width="33%">
+        <img src="media/bw_headshot.png" width="250">
+        <img src="media/color_headshot.png" width="250">
+        </td>-->
       </tr>
       </table>
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
