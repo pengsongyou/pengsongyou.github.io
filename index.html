@@ -144,17 +144,20 @@
     <tr onmouseout="filters_stop()" onmouseover="filters_start()">
       <td width="25%">
         <div class="one">
-        <div class="two" id="filter_image"><img src="media/iccvw17_pic.jpg" width="160" height="100" alt="filters"></div>
-        <img src="media/iccvw17_pic.jpg" width="160" height="100" alt="filters">
+        <div class="two" id = 'filter_image'><img src='media/iccvw17_pic2.jpg' width="110" height="110"></div>
+        <div class="two" id = 'filter_image2'><img src='media/iccvw17_pic1.jpg' width="160" height="110"></div>
         </div>
         <script type="text/javascript">
         function filters_start() {
         document.getElementById('filter_image').style.opacity = "1";
+        document.getElementById('filter_image2').style.opacity = "0";
         }
         function filters_stop() {
         document.getElementById('filter_image').style.opacity = "0";
+        document.getElementById('filter_image2').style.opacity = "1";
         }
         filters_stop()
+        </script>
         </script>
       </td>
       <td valign="top" width="75%">
@@ -247,8 +250,8 @@
     <tr onmouseout="selectivity_stop()" onmouseover="selectivity_start()">
       <td width="25%">
         <div class="one">
-        <div class="two" id = 'selectivity_image_2'><img src='media/msc_pic.jpg' width="160" height="120"></div>
-        <div class="two" id = 'selectivity_image_1'><img src='media/msc_pic.jpg' width="160" height="120"></div>
+        <div class="two" id = 'selectivity_image_2'><img src='media/ratio_shoe_shape.jpg' width="160" height="120"></div>
+        <div class="two" id = 'selectivity_image_1'><img src='media/ratio_shoe_rgb.jpg' width="160" height="120"></div>
         <!--<img src='media/selectivity_1.png' width="160" height="130">-->
         </div>
         <script type="text/javascript">
