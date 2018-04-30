@@ -38,13 +38,13 @@
     .one
     {
     width: 160px;
-    height: 160px;
+    height: 120px;
     position: relative;
     }
     .two
     {
     width: 160px;
-    height: 160px;
+    height: 100px;
     position: absolute;
     transition: opacity .2s ease-in-out;
     -moz-transition: opacity .2s ease-in-out;
@@ -78,7 +78,7 @@
           ruthfong at robots dot ox dot ac dot uk-->
         </p>
         <p>
-          I am currently a research engineer in <a href="https://adsc.illinois.edu">Advanced Digital Sciences Center (ADSC)</a> of <a href="http://illinois.edu/">University of Illinois Urbana-Champaign(UIUC)</a>. 
+          I am currently a research engineer in <a href="https://adsc.illinois.edu">Advanced Digital Sciences Center (ADSC)</a>, the Singapore-based research center of <a href="http://illinois.edu/">University of Illinois Urbana-Champaign(UIUC)</a>. 
         </p>
         <p>
           I completed a Erasmus Mundus Masters in Computer Vision and Robotics (<a href="https://www.vibot.org/">VIBOT</a>). I was fortunate to be supervised by <a href="https://vision.in.tum.de/members/cremers">Daniel Cremers</a> at <a href="https://vision.in.tum.de">Technical University of Munich (TUM)</a> and work with <a href="https://team.inria.fr/steep/en/people/peter-sturm/">Peter Sturm</a> at <a href="https://www.inria.fr/en/">INRIA Grenoble</a>. Before this, I obtained a Bachelors in Automation at <a href="http://en.xjtu.edu.cn/">Xi'an Jiaotong University (XJTU)</a>.
@@ -134,7 +134,7 @@
         <td width="100%" valign="middle">
           <heading>Research</heading>
           <p>
-          I'm interested in computer vision, 3D vision and deep learning.
+          I am interested in computer vision, 3D vision and deep learning.
           </p>
         </td>
       </tr>
@@ -283,11 +283,52 @@
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
       <tr>
         <td>
-        <heading>Course Projects</heading>
+        <heading>Selected Projects</heading>
         </td>
       </tr>
       </table>
       <table width="100%" align="center" border="0" cellpadding="20">
+    <tr onmouseout="dna_stop()" onmouseover="dna_start()">
+      <td width="25%">
+        <div class="one">
+        <div align="center" class="two" id='dna_gif'><img src='media/OMG_logo.png' width="150" height="80"></div>
+        <div align="center" class="two" id='dna_image'><img src='media/OMG_logo.png' width="150" height="80"></div>
+        </div>
+        <script type="text/javascript">
+        function dna_start() {
+        document.getElementById('dna_gif').style.opacity = "1";
+        document.getElementById('dna_image').style.opacity = "0";
+        }
+        function dna_stop() {
+        document.getElementById('dna_gif').style.opacity = "0";
+        document.getElementById('dna_image').style.opacity = "1";
+        }
+        dna_stop()
+        </script>
+      </td>
+        <!--<td width="25%"><img src="media/gwas.png" alt="GWAS image from https://upload.wikimedia.org/wikipedia/commons/5/59/GWAS_loci_influencing_human_facial_and_scalp_hair_phenotypes_-_cropped.png" width="160" height="160"></td>-->
+      <!--<tr>
+        <td width="25%"><img src="media/benedict_1.png" alt="benedict-otter-look-a-like" width="160" height="160"></td>-->
+        <td width="75%" valign="top">
+        <p>
+          <a href="https://github.com/PaolaArdon/Salt-Pepper">
+          <papertitle>Two-Stream Deep Network for Emotion Recognition</papertitle>
+          </a>
+          <br>
+          <strong>Songyou Peng</strong>, <a href="https://sites.google.com/site/zhangleuestc/home">Le Zhang</a>, <a href="https://team.inria.fr/perception/team-members/yutong-ban/">Yutong Ban</a>, <a href="http://people.eng.unimelb.edu.au/mengf1/">Meng Fang</a>, <a href="stefan.winkler.site">Stefan Winkler</a>
+          <br>
+    	  <em>IJCNN OMG-Emotion Challenge</em>, 2018<br>
+          <a href="https://www2.informatik.uni-hamburg.de/wtm/OMG-EmotionChallenge/">leaderboard</a> /
+      	  arxiv</a> /
+          <a href="https://github.com/pengsongyou/OMG-ADSC">code</a>
+          <p></p>
+          <p></p>
+
+           </a>
+        </p>
+        </p>
+        </td>
+      </tr>
     <tr onmouseout="dna_stop()" onmouseover="dna_start()">
       <td width="25%">
         <div class="one">
@@ -337,7 +378,7 @@
           <font size="2">
           <a href="https://jonbarron.info/">I owe this guy a cup of beer</a>
           <br>
-          Last updated: April 2018
+          Last updated: May 2018
         </font>
         </p>
         </td>
