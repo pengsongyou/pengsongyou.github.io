@@ -1,0 +1,7 @@
+@MastersThesis{peng2017msc,
+    author     =     {Songyou Peng},
+    title     =     {High Quality Shape from a RGB-D Camera using Photometric Stereo},
+    school     =     {Erasmus Mundus Masters in Vision and Robotics (VIBOT)},
+    year     =     {2017},
+    month     =     {June}
+}
