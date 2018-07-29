@@ -209,12 +209,13 @@
       </td>
     </tr>
 
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-    <tr onmouseout="filters_stop()" onmouseover="filters_start()">
+
+    <tr onmouseout="selectivity_stop()" onmouseover="selectivity_start()">
       <td width="25%">
         <div class="one">
-        <div class="two" id = 'filter_image'><img src='media/iccvw17_pic2.jpg' width="160" height="110"></div>
-        <div class="two" id = 'filter_image2'><img src='media/iccvw17_pic1.jpg' width="160" height="110"></div>
+        <div class="two" id = 'selectivity_image_2'><img src='media/iccvw17_pic2.jpg' width="160" height="110"></div>
+        <div class="two" id = 'selectivity_image_1'><img src='media/iccvw17_pic1.jpg' width="160" height="110"></div>
+        <!--<img src='media/selectivity_1.png' width="160" height="130">-->
         </div>
         <script type="text/javascript">
         function filters_start() {
@@ -246,75 +247,6 @@
       </td>
     </tr>
 
-
-    <!-- <tr onmouseout="flute_stop()" onmouseover="flute_start()" bgcolor="#ffffd0">
-      <td width="25%">
-        <div class="one">
-        <div class="two" id = 'flute_image_2'><img src='media/flute_2.png' alt="flute" height="150" width="160"></div>
-        <div class="two" id = 'flute_image_1'><img src='media/flute_1.png' alt="flute" height="150" width="160"></div> -->
-        <!--<img src='media/flute_1.png' alt="flute" height="150" width="160">-->
-        <!-- </div> -->
-        <!-- <script type="text/javascript"> -->
-        <!-- function flute_start() { -->
-        <!-- document.getElementById('flute_image_2').style.opacity = "1"; -->
-        <!-- document.getElementById('flute_image_1').style.opacity = "0"; -->
-        <!-- } -->
-        <!-- function flute_stop() { -->
-        <!-- document.getElementById('flute_image_2').style.opacity = "0"; -->
-        <!-- document.getElementById('flute_image_1').style.opacity = "1"; -->
-        <!-- } -->
-        <!-- flute_stop() -->
-        <!-- </script> -->
-      <!-- </td> -->
-      <!-- <td valign="top" width="75%"> -->
-        <!-- <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Fong_Interpretable_Explanations_of_ICCV_2017_paper.pdf"> -->
-        <!-- <papertitle>Interpretable Explanations of Black Box Algorithms by Meaningful Perturbation</papertitle> -->
-        <!-- </a> -->
-        <!-- <br> -->
-          <!-- <strong>Ruth Fong</strong> and <a href="http://www.robots.ox.ac.uk/~vedaldi/">Andrea Vedaldi</a> -->
-        <!-- <br> -->
-        <!-- <em>ICCV</em>, 2017 <br> -->
-        <!-- <a href="https://arxiv.org/abs/1704.03296">arxiv</a> /  -->
-        <!-- <a href="http://openaccess.thecvf.com/content_ICCV_2017/supplemental/Fong_Interpretable_Explanations_of_ICCV_2017_supplemental.pdf">supp</a> / -->
-        <!-- <a href="bib/FongVedaldiICCV2017.bib">bibtex</a> /  -->
-        <!-- <a href="https://github.com/ruthcfong/perturb_explanations">code</a> -->
-        <!-- <p></p> -->
-        <!-- <p>We developed a theoretical framework for learning "explanations" of black box functions like CNNs as well as saliency methods for identifying "where" a computer vision algorithm is looking.</p> -->
-      <!-- </td>  -->
-    <!-- </tr> -->
-      
-    <!-- <tr onmouseout="classifier_stop()" onmouseover="classifier_start()" bgcolor="#ffffd0">
-      <td width="25%">
-        <div class="one">
-        <div class="two" id = 'classifier_image'><img src='media/classifier_2.png' width="160" height="130"></div>
-        <img src='media/classifier_1.png' width="160" height="130">
-        </div>
-        <script type="text/javascript">
-        function classifier_start() {
-        document.getElementById('classifier_image').style.opacity = "1";
-        }
-        function classifier_stop() {
-        document.getElementById('classifier_image').style.opacity = "0";
-        }
-        classifier_stop()
-        </script>
-      </td>
-      <td valign="top" width="75%">
-        <p><a href="https://arxiv.org/abs/1703.05463">
-        <papertitle>Using Human Brain Activity to Guide Machine Learning</papertitle></a>
-        <br>
-          <strong>Ruth Fong</strong>, <a href="https://www.wjscheirer.com/">Walter Scheirer</a>, <a href="http://coxlab.org/">David Cox</a>
-        <br>
-        <em>Scientific Reports</em>, 2017 (in press)<br>
-        <a href="https://arxiv.org/abs/1703.05463">arxiv</a> / 
-        <a href="https://arxiv.org/src/1703.05463v2/anc/fong-et-al-supplementary.pdf">supp</a> / 
-        <a href="https://dash.harvard.edu/handle/1/14398538">Harvard thesis</a> / 
-        <a href="bib/FongScheirerCox2017.bib">bibtex</a> / 
-        code (coming soon)
-        <p></p>
-        <p>We introduce a biologically-informed machine learning paradigm for object classification that biases models to better match the learned, internal representations of the visual cortex.</p>
-      </td>
-    </tr> -->
 
     <tr onmouseout="selectivity_stop()" onmouseover="selectivity_start()">
       <td width="25%">
@@ -351,7 +283,8 @@
       </td>
     </tr>
 
-      </table>
+  </table>
+
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
       <tr>
         <td>
@@ -396,7 +329,7 @@
           <p></p>
           <p></p>
 
-          Our ADSC team's submissions ranked <strong>1st</strong> for vision-only arousal/valence prediction and <strong>2nd</strong> for overall valence prediction. </a>
+           <strong>1st</strong> for vision-only arousal/valence prediction and <strong>2nd</strong> for overall valence prediction. </a>
         </p>
         </p>
         </td>
