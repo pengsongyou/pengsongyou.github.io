@@ -178,22 +178,20 @@
       </table>
 
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-    <tr onmouseout="filters_stop()" onmouseover="filters_start()">
+    <tr onmouseout="personality_stop()" onmouseover="personality_start()">
       <td width="25%">
         <div class="one">
-        <div class="two" id = 'filter_image'><img src='media/mm_18_mock_interface.jpg' width="160" height="110"></div>
-        <div class="two" id = 'filter_image2'><img src='media/mm_18_mock_interface.jpg' width="160" height="110"></div>
+        <div class="two" id = 'personality_image'><img src='media/mm_18_mock_interface.jpg' width="160" height="110"></div>
+        <src='media/mm_18_mock_interface.jpg' width="160" height="110">
         </div>
         <script type="text/javascript">
-        function filters_start() {
-        document.getElementById('filter_image').style.opacity = "1";
-        document.getElementById('filter_image2').style.opacity = "0";
+        function personality_start() {
+        document.getElementById('personality_image').style.opacity = "1";
         }
-        function filters_stop() {
-        document.getElementById('filter_image').style.opacity = "0";
-        document.getElementById('filter_image2').style.opacity = "1";
+        function personality_stop() {
+        document.getElementById('personality_image').style.opacity = "1";
         }
-        filters_stop()
+        personality_stop()
         </script>
         </script>
       </td>
@@ -206,28 +204,25 @@
         <br>
         <!-- long abstract (coming soon) -->
         <p></p>
-        <p>A deep Siamese-like network is introduced to predict one's Big-Five personality attributes from one portrait photo.</p>
+        <p>A deep Siamese-like network is introduced to predict one's Big-Five personality and arousal-valence emotion from one portrait photo.</p>
       </td>
     </tr>
 
-
-    <tr onmouseout="selectivity_stop()" onmouseover="selectivity_start()">
+    <tr onmouseout="iccvw_stop()" onmouseover="iccvw_start()">
       <td width="25%">
         <div class="one">
-        <div class="two" id = 'selectivity_image_2'><img src='media/iccvw17_pic2.jpg' width="160" height="110"></div>
-        <div class="two" id = 'selectivity_image_1'><img src='media/iccvw17_pic1.jpg' width="160" height="110"></div>
+        <div class="two" id = 'iccvw_shape'><img src='media/iccvw17_pic2.jpg' width="160" height="110"></div>
+        <img src='media/iccvw17_pic1.jpg' width="160" height="110"></div>
         <!--<img src='media/selectivity_1.png' width="160" height="130">-->
         </div>
         <script type="text/javascript">
-        function filters_start() {
-        document.getElementById('filter_image').style.opacity = "1";
-        document.getElementById('filter_image2').style.opacity = "0";
+        function iccvw_start() {
+        document.getElementById('iccvw_shape').style.opacity = "1";
         }
-        function filters_stop() {
-        document.getElementById('filter_image').style.opacity = "0";
-        document.getElementById('filter_image2').style.opacity = "1";
+        function iccvw_stop() {
+        document.getElementById('iccvw_shape').style.opacity = "0";
         }
-        filters_stop()
+        iccvw_stop()
         </script>
         </script>
       </td>
@@ -248,24 +243,21 @@
       </td>
     </tr>
 
-
-    <tr onmouseout="selectivity_stop()" onmouseover="selectivity_start()">
+    <tr onmouseout="msc_stop()" onmouseover="msc_start()">
       <td width="25%">
         <div class="one">
-        <div class="two" id = 'selectivity_image_2'><img src='media/ratio_shoe_shape.jpg' width="160" height="120"></div>
-        <div class="two" id = 'selectivity_image_1'><img src='media/ratio_shoe_rgb.jpg' width="160" height="120"></div>
+        <div class="two" id = 'msc_shape'><img src='media/ratio_shoe_shape.jpg' width="160" height="120"></div>
+        <img src='media/ratio_shoe_rgb.jpg' width="160" height="120">
         <!--<img src='media/selectivity_1.png' width="160" height="130">-->
         </div>
         <script type="text/javascript">
-        function selectivity_start() {
-        document.getElementById('selectivity_image_2').style.opacity = "1";
-        document.getElementById('selectivity_image_1').style.opacity = "0";
+        function msc_start() {
+        document.getElementById('msc_shape').style.opacity = "1";
         }
-        function selectivity_stop() {
-        document.getElementById('selectivity_image_2').style.opacity = "0";
-        document.getElementById('selectivity_image_1').style.opacity = "1";
+        function msc_stop() {
+        document.getElementById('msc_shape').style.opacity = "0";
         }
-        selectivity_stop()
+        msc_stop()
         </script>
       </td>
       <td valign="top" width="75%">
