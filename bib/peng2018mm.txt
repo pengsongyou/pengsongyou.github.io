@@ -1,0 +1,6 @@
+@inproceedings{peng2018mm,
+ author =  {Songyou Peng and Le Zhang and Stefan Winkler and Marianne},
+ title = {Give Me One Portrait Image, I Will Tell You Your Emotion and Personality},
+ year = {2018},
+ booktitle = {ACM International Conference on Multimedia (ACM MM)},
+}
