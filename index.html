@@ -79,7 +79,7 @@
           ruthfong at robots dot ox dot ac dot uk-->
         </p>
         <p>
-          I am an incoming PhD student at <a href="https://ethz.ch/en.html">ETH Zürich</a> and <a href="https://ethz.ch/en.html">Max Planck Institute for Intelligent Systems</a> as part of <a href="https://learning-systems.org/">Max Planck ETH Center for Learning Systems</a>. 
+          I am an incoming PhD student at <a href="https://ethz.ch/en.html">ETH Zurich</a> and <a href="https://is.tuebingen.mpg.de/">Max Planck Institute for Intelligent Systems</a> as part of <a href="https://learning-systems.org/">Max Planck ETH Center for Learning Systems</a>. 
         </p>  
         <p>
           Previously, I was a research engineer at <a href="https://adsc.illinois.edu">Advanced Digital Sciences Center (ADSC)</a>, a research center of <a href="http://illinois.edu/">University of Illinois Urbana-Champaign (UIUC)</a> based in Singapore. I was also working at Institute for Infocomm Research (I2R), <a href="https://www.a-star.edu.sg/">Agency for Science, Technology and Research (A*STAR)</a>, Singapore. 
@@ -93,7 +93,7 @@
         <!--<p>I'm also supported by <a href="https://brianzhang01.github.io/">this fellow</a>.
         </p>-->
         <p align=center>
-          <a href="mailto:removethisifyouarehuman-songyou.peng@adsc-create.edu.sg">Email</a> &nbsp/&nbsp
+          <a href="mailto:removethisifyouarehuman-songyou.pp@gmail.com">Email</a> &nbsp/&nbsp
           <a href="files/cv_songyou.pdf">CV</a> &nbsp/&nbsp
           <!--<a href="files/ruth_fong_bio.txt">Biography</a> &nbsp/&nbsp-->
 <!--           <a href="https://scholar.google.com/citations?user=39cUD3gAAAAJ">Google Scholar</a> &nbsp/&nbsp -->
@@ -166,10 +166,11 @@
         <td>
           <heading>News</heading>
             <ul>
-        	  <li><b>06/2019</b>: <strong>One paper is accepted to T-PAMI 2019!</strong> See the <span class="highlight">highlight</span>.
+              <li><b>07/2019</b>: <strong>One paper is accepted to ICCV 2019 as <span style="color:#ff0000;">oral presentation</span>!</strong> See the <span class="highlight">highlight</span>.
+        	    <li><b>06/2019</b>: One paper is accepted to TPAMI 2019! 
               <li><b>07/2018</b>: One paper is accepted to <a href= "http://www.acmmm.org/2018/">ACM MM</a> as Technical Demo. 
               <li><b>05/2018</b>: In <a href="https://www2.informatik.uni-hamburg.de/wtm/OMG-EmotionChallenge/">OMG-Emotion Challenge 2018</a>, our ADSC team ranked <strong>1st</strong> for vision-only arousal/valence prediction and <strong>2nd</strong> for overall valence prediction! 
-              <li><b>01/2018</b>: I joined ADSC-UIUC as a research engineer.
+              <!-- <li><b>01/2018</b>: I joined ADSC-UIUC as a research engineer. -->
               <li><b>10/2017</b>: I presented my work on ICCV 2017 <a href="https://cpcv.data61.csiro.au/">Color and Photometry in Computer Vision Workshop</a>.</li>
 <!--               <li><b>06/2017</b>: I defensed my <a href="https://github.com/pengsongyou/msc-thesis">master thesis</a>!  -->
             </ul>
@@ -187,7 +188,7 @@
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
-    <tr onmouseout="wizard_stop()" onmouseover="wizard_start()">
+    <tr onmouseout="wizard_stop()" onmouseover="wizard_start()" bgcolor="#ffffd0">
       <td width="25%">
         <div class="one">
         <div class="two" id = 'wizard_shape'>
@@ -206,12 +207,13 @@
         </script>
       </td>
       <td valign="top" width="75%">
-            <papertitle>Calibration Wizard: A Guidance System for Camera Calibration</papertitle>
+            <papertitle>Calibration Wizard: A Guidance System for Camera Calibration Based on Modelling Geometric and Corner Uncertainty</papertitle>
       <br>
           <strong>Songyou Peng</strong> and  
           <a href="https://team.inria.fr/steep/people/peter-sturm/">Peter Sturm</a>
       <br>
-          <em>In Submission </em>
+          <em>International Conference on Computer Vision (<strong>ICCV</strong>), 2019 </em>  <span style="color:#ff0000;">(<strong>Oral</strong>)</span>
+   
       <br>
         <a href="https://arxiv.org/abs/1811.03264">arxiv</a>
         <p></p>
@@ -220,7 +222,48 @@
       </td>
     </tr>
 
+
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+    <tr onmouseout="pami_stop()" onmouseover="pami_start()">
+      <td width="25%">
+        <div class="one">
+        <div class="two" id = 'pami_shape'>
+        <img src='media/face_out.jpg' width="160" height="110"></div>
+        <img src='media/face_in.jpg' width="160" height="110"></div>
+        </div>
+        <script type="text/javascript">
+        function pami_start() { 
+        document.getElementById('pami_shape').style.opacity = "1";
+        }
+        function pami_stop() { 
+        document.getElementById('pami_shape').style.opacity = "0"; 
+        }
+        pami_stop()
+        </script>
+        </script>
+      </td>
+      <td valign="top" width="75%">
+            <papertitle>Photometric Depth Super-Resolution</papertitle>
+      <br>
+          <a href="https://vision.in.tum.de/members/haefner">Bjoern Haefner</a>*, <strong>Songyou Peng*</strong>, 
+          <a href="">Alok Verma</a>*, 
+          <a href="https://sites.google.com/view/yvainqueau">Yvain Queau</a>, 
+          <a href="https://vision.in.tum.de/members/cremers">Daniel Cremers</a> 
+      <br>
+          <em>IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>TPAMI</strong>), 2019. In press.</em>
+      <br>
+           (* equal contribution)
+      <br>
+        <a href="https://arxiv.org/abs/1809.10097">arxiv</a> /
+        <a href="https://vision.in.tum.de/data/datasets/photometricdepthsr">project page</a> 
+        <p></p>
+        Photometric techniques to recover high-resolution depth maps with fine geometric details.
+        <p></p>
+      </td>
+    </tr>
+
+    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
     <tr onmouseout="persemon_stop()" onmouseover="persemon_start()">
       <td width="25%">
@@ -255,45 +298,6 @@
     </tr>
   
 
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-
-    <tr onmouseout="pami_stop()" onmouseover="pami_start()" bgcolor="#ffffd0">
-      <td width="25%">
-        <div class="one">
-        <div class="two" id = 'pami_shape'>
-        <img src='media/face_out.jpg' width="160" height="110"></div>
-        <img src='media/face_in.jpg' width="160" height="110"></div>
-        </div>
-        <script type="text/javascript">
-        function pami_start() { 
-        document.getElementById('pami_shape').style.opacity = "1";
-        }
-        function pami_stop() { 
-        document.getElementById('pami_shape').style.opacity = "0"; 
-        }
-        pami_stop()
-        </script>
-        </script>
-      </td>
-      <td valign="top" width="75%">
-            <papertitle>Photometric Depth Super-Resolution</papertitle>
-      <br>
-          <a href="https://vision.in.tum.de/members/haefner">Bjoern Haefner</a>*, <strong>Songyou Peng*</strong>, 
-          <a href="">Alok Verma</a>*, 
-          <a href="https://sites.google.com/view/yvainqueau">Yvain Queau</a>, 
-          <a href="https://vision.in.tum.de/members/cremers">Daniel Cremers</a> 
-      <br>
-          <em>IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>T-PAMI</strong>), 2019. In press.</em>
-      <br>
-           (* equal contribution)
-      <br>
-        <a href="https://arxiv.org/abs/1809.10097">arxiv</a> /
-        <a href="https://vision.in.tum.de/data/datasets/photometricdepthsr">project page</a> 
-        <p></p>
-        Photometric techniques to recover high-resolution depth maps with fine geometric details.
-        <p></p>
-      </td>
-    </tr>
 
     
     <tr onmouseout="personality_stop()" onmouseover="personality_start()">
@@ -436,7 +440,7 @@
           <strong>Songyou Peng</strong>, <a href="https://sites.google.com/site/zhangleuestc/home">Le Zhang</a>, <a href="https://team.inria.fr/perception/team-members/yutong-ban/">Yutong Ban</a>, <a href="http://people.eng.unimelb.edu.au/mengf1/">Meng Fang</a>, <a href="stefan.winkler.site">Stefan Winkler</a>
           <br>
     	  <em>IJCNN One-Minute Gradual (OMG) Emotion Behavior Challenge</em>, 2018<br>
-          <a href="https://www2.informatik.uni-hamburg.de/wtm/OMG-EmotionChallenge/">leaderboard</a> /
+          <a href="https://www2.informatik.uni-hamburg.de/wtm/omgchallenges/omg_emotion2018_results2018.html">leaderboard</a> /
       	  <a href="https://arxiv.org/abs/1805.00638">arxiv</a> /
           <a href="https://github.com/pengsongyou/OMG-ADSC">code</a>
           <p></p>
@@ -496,7 +500,7 @@
           <font size="2">
           template from <a href="https://jonbarron.info/"><font size="2">this awesome website</font></a>
           <br>
-          Last updated: June 2019
+          Last updated: July 2019
         </font>
         </p>
         </td>
