@@ -1,0 +1,6 @@
+@inproceedings{peng2019iccv,
+ author =  {Songyou Peng and Peter Sturm},
+ title = {Calibration Wizard: A Guidance System for Camera Calibration Based on Modelling Geometric and Corner Uncertainty},
+ booktitle = {IEEE International Conference on Computer Vision (ICCV)},
+ year = {2019},
+}

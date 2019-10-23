@@ -1,0 +1,6 @@
+@article{haefner2019pami,
+ author =  {Bjoern Haefner and Songyou Peng and Alok Verma and Yvain Qu{\'e}au and Daniel Cremers},
+ title = {Photometic Depth Super-Resolution},
+ booktitle = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+ year = {2019},
+}

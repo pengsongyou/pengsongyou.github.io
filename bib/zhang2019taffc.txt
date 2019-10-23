@@ -1,0 +1,6 @@
+@article{zhang2019taffc,
+ author =  {Le Zhang and Songyou Peng and Stefan Winkler},
+ title = {{PersEmoN}: A Deep Network for Joint Analysis of Apparent Personality, Emotion and Their Relationship},
+ booktitle = {IEEE Transactions on Affective Computing},
+ year = {2019},
+}
