@@ -1,0 +1,6 @@
+@inproceedings{liu2020cvpr,
+ author =  {Shaohui Liu and Yinda Zhang and Songyou Peng and Boxin Shi and Marc Pollefeys and Zhaopeng Cui},
+ title = {DIST: Rendering Deep Implicit Signed Distance Function with Differentiable Sphere Tracing},
+ booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+ year = {2020},
+}
