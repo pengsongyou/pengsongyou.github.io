@@ -231,9 +231,13 @@
             Abstract
           </h2>
         </center>
-        <br>
         <p>
         <left>
+          <span style="font-size:16px">
+          <b>TL;DR: A flexible implicit representation for accurate large-scale 3D reconstruction by combining convolutional encoders with implicit occupancy decoders.</b>
+          </span>
+          <br>
+          <br>
           Recently, implicit neural representations have gained popularity for learning-based 3D reconstruction. While demonstrating promising results, most implicit approaches are limited to comparably simple geometry of single objects and do not scale to more complicated or large-scale scenes. The key limiting factor of implicit methods is their simple fully-connected network architecture which does not allow for integrating local information in the observations or incorporating inductive biases such as translational equivariance. In this paper, we propose Convolutional Occupancy Networks, a more flexible implicit representation for detailed reconstruction of objects and 3D scenes. By combining convolutional encoders with implicit occupancy decoders, our model incorporates inductive biases, enabling structured reasoning in 3D space. We investigate the effectiveness of the proposed representation by reconstructing complex geometry from noisy point clouds and low-resolution voxel representations. We empirically find that our method enables the fine-grained implicit 3D reconstruction of single objects, scales to large indoor scenes, and generalizes well from synthetic to real data.
         </left>
       </p>
