@@ -89,15 +89,15 @@
         </p>
         <p>
           I am a PhD student at <a href="https://ethz.ch/en.html">ETH Zurich</a> and <a href="https://is.tuebingen.mpg.de/">Max Planck Institute for Intelligent Systems</a> as part of <a href="https://learning-systems.org/">Max Planck ETH Center for Learning Systems</a>. I am co-supervised by Prof. <a href="https://inf.ethz.ch/personal/marc.pollefeys/">Marc Pollefeys</a> and Prof. <a href="http://www.cvlibs.net/">Andreas Geiger</a>. 
-          I am currently working at <a href="http://www.cvlibs.net/">Autonomous Vision Group (AVG)</a> at MPI Tubingen.
+          <!-- I am currently working at <a href="http://www.cvlibs.net/">Autonomous Vision Group (AVG)</a> at MPI Tubingen. -->
           <!-- I am currently working at <a href="https://cvg.ethz.ch">Computer Vision & Geometry Group</a> at ETH Zurich. -->
         </p>  
         <p>
-          I completed an Erasmus Mundus Masters in Computer Vision and Robotics (<a href="https://www.vibot.org/">VIBOT</a>) with distinction. During the master, I was fortunate to be supervised by Prof. <a href="https://vision.in.tum.de/members/cremers">Daniel Cremers</a> at <a href="https://vision.in.tum.de">Technical University of Munich</a> for my thesis and work with Prof. <a href="https://team.inria.fr/steep/en/people/peter-sturm/">Peter Sturm</a> at <a href="https://www.inria.fr/en/">INRIA Grenoble</a> for two summers. Before this, I obtained a Bachelors in Automation at <a href="http://en.xjtu.edu.cn/">Xi'an Jiaotong University</a>.
+          I completed an Erasmus Mundus Masters in Computer Vision and Robotics (<a href="https://www.vibot.org/">VIBOT</a>) with distinction. During the master, I was fortunate to be supervised by Prof. <a href="https://vision.in.tum.de/members/cremers">Daniel Cremers</a> at <a href="https://vision.in.tum.de">Technical University of Munich</a> for my thesis and work with Prof. <a href="https://team.inria.fr/steep/en/people/peter-sturm/">Peter Sturm</a> at <a href="https://www.inria.fr/en/">INRIA</a> for two summers. Before this, I obtained a Bachelors in Automation at <a href="http://en.xjtu.edu.cn/">Xi'an Jiaotong University</a>.
         </p>
 
         <p>
-          Before my PhD, I was a research engineer at <a href="https://adsc.illinois.edu">ADSC</a> and <a href="https://www.a-star.edu.sg/">A*STAR</a> in Singapore.
+          I have also spent some time at <a href="https://adsc.illinois.edu">ADSC</a> and <a href="https://www.a-star.edu.sg/">A*STAR</a> in Singapore.
           <!-- Previously, I was a research engineer at <a href="https://adsc.illinois.edu">Advanced Digital Sciences Center (ADSC)</a>, a research center of <a href="http://illinois.edu/">University of Illinois Urbana-Champaign (UIUC)</a> based in Singapore. I was also working at Institute for Infocomm Research (I2R), <a href="https://www.a-star.edu.sg/">Agency for Science, Technology and Research (A*STAR)</a>, Singapore.  -->
         </p>
 <!--         <p> -->
@@ -198,6 +198,43 @@
       </tr>
       </table>
 
+<!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+    <tr onmouseout="kilo_stop()" onmouseover="kilo_start()">  
+      <td width="25%">
+        <div class="one">
+        <div class="two" id = 'dpcon_shape'>
+        <img src='media/kilo_teaser.png' width="160" height="130"></div>
+        <img src='media/kilo_teaser.png' width="160" height="130"></div>
+        </div>
+        <script type="text/javascript">
+        function kilo_start() { 
+        document.getElementById('kilo_shape').style.opacity = "1";
+        }
+        function kilo_stop() { 
+        document.getElementById('kilo_shape').style.opacity = "0"; 
+        }
+        con_stop()
+        </script>
+        </script>
+      </td>
+      <td valign="top" width="75%">
+            <papertitle>KiloNeRF: Speeding up Neural Radiance Fields with Thousands of Tiny MLPs</papertitle>
+      <br>
+      	  <a href="https://avg.is.tuebingen.mpg.de/person/creiser">Christian Reiser</a>,
+      	  <strong>Songyou Peng</strong>,
+      	  <a href="https://yiyiliao.github.io/">Yiyi Liao</a>,
+      	  <a href="http://www.cvlibs.net/">Andreas Geiger</a>
+      <br>
+          <em>arXiv</em>, 2021
+      <br>
+        <a href="https://arxiv.org/abs/2011.05813">paper</a>
+        <p></p>
+        Significant speed-ups for NeRF are possible by utilizing thousands of tiny MLPs.
+        <p></p>
+      </td>
+    </tr> -->
+
+
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     <tr onmouseout="dpcon_stop()" onmouseover="dpcon_start()">  
       <td width="25%">
@@ -207,10 +244,10 @@
         <img src='media/dp-con.png' width="160" height="120"></div>
         </div>
         <script type="text/javascript">
-        function con_start() { 
+        function dpcon_start() { 
         document.getElementById('dpcon_shape').style.opacity = "1";
         }
-        function con_stop() { 
+        function dpcon_stop() { 
         document.getElementById('dpcon_shape').style.opacity = "0"; 
         }
         con_stop()
@@ -218,7 +255,7 @@
         </script>
       </td>
       <td valign="top" width="75%">
-      		<a href="https://pengsongyou.github.io/">
+      		<a href="https://github.com/dsvilarkovic/dynamic_plane_convolutional_onet">
             <papertitle>Dynamic Plane Convolutional Occupancy Networks</papertitle></a>
       <br>
       	  <a href="https://www.google.com/search?q=Stefan+Lionar">Stefan Lionar*</a>,
@@ -231,7 +268,8 @@
    		  (* equal contribution)
       <br>
         <a href="https://arxiv.org/abs/2011.05813">paper</a> /
-        <a href="https://github.com/dsvilarkovic/dynamic_plane_convolutional_onet">code</a>
+        <a href="https://github.com/dsvilarkovic/dynamic_plane_convolutional_onet">code</a> /
+        <a href="https://screencast-o-matic.com/watch/cYXOcaLKJz">video</a>
         <!-- <a href="https://github.com/B1ueber2y/DIST-Renderer">code</a> -->
         <p></p>
         This is a student project of 3D Vision course at ETH Zurich where I served as the advisor.
@@ -541,7 +579,7 @@
       <td valign="top" width="75%">
         <p>
         <a href="https://github.com/pengsongyou/msc-thesis">
-        <papertitle>High Quality Shape from a RGB-D Camera using Photometric Stereo</papertitle>
+        <papertitle>High Quality Shape from a RGB-D Camera using Photometric Stereo</papertitle></a>
         <br>
           <strong>Songyou Peng</strong> 
         <br>
