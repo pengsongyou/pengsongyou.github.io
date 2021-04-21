@@ -199,6 +199,41 @@
       </table>
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+    <tr onmouseout="unisurf_stop()" onmouseover="unisurf_start()">  
+      <td width="25%">
+        <div class="one">
+        <div class="two" id = 'unisurf_shape'>
+        <img src='media/unisurf_shape2.jpg' width="160" height="130"></div>
+        <img src='media/unisurf_rgb2.jpg' width="160" height="130"></div>
+        </div>
+        <script type="text/javascript">
+        function unisurf_start() { 
+        document.getElementById('unisurf_shape').style.opacity = "1";
+        }
+        function unisurf_stop() { 
+        document.getElementById('unisurf_shape').style.opacity = "0"; 
+        }
+        unisurf_stop()
+        </script>
+        </script>
+      </td>
+      <td valign="top" width="75%">
+            <papertitle>UNISURF: Unifying Neural Implicit Surfaces and Radiance Fields for Multi-View Reconstruction</papertitle>
+      <br>
+      	  <a href="https://avg.is.tuebingen.mpg.de/person/moechsle">Michael Oechsle</a>,
+      	  <strong>Songyou Peng</strong>,
+          <a href="http://www.cvlibs.net/">Andreas Geiger</a>
+      <br>
+          <em>arXiv</em>, 2021
+      <br>
+        <a href="https://arxiv.org/abs/2104.10078">paper</a>
+        <p></p>
+          Our method enables to reconstruct accurate surfaces without input masks.
+        <p></p>
+      </td>
+    </tr>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     <tr onmouseout="kilo_stop()" onmouseover="kilo_start()">  
       <td width="25%">
         <div class="one">
@@ -215,7 +250,7 @@
         function kilo_stop() { 
         document.getElementById('kilo_shape').style.opacity = "0"; 
         }
-        con_stop()
+	kilo_stop()
         </script>
         </script>
       </td>
