@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="An interpretable and lightweight shape representation">
+  <meta name="keywords" content="SAP, Shape-As-Points">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shape As Points (SAP)</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+
+
+
+  </script> -->
+
+<link rel="icon" type="image/png" href="media/sap/sap_preview.png">  
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./media/sap/css/bulma.min.css">
+  <link rel="stylesheet" href="./media/sap/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./media/sap/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./media/sap/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./media/sap/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./media/sap/js/fontawesome.all.min.js"></script>
+  <script src="./media/sap/js/bulma-carousel.min.js"></script>
+  <script src="./media/sap/js/bulma-slider.min.js"></script>
+  <script src="./media/sap/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://pengsongyou.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://pengsongyou.github.io/conv_onet">
+            ConvONet
+          </a>
+          <a class="navbar-item" href="https://moechsle.github.io/unisurf/">
+            UNISURF
+          </a>
+          <a class="navbar-item" href="https://creiser.github.io/kilonerf/">
+            KiloNeRF
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Shape As Points<br/>A Differentiable Poisson Solver</h1>
+          <div class="column is-full_width">
+            <h2 class="title is-4">NeurIPS 2021 (Oral)</h2>
+          </div>
+          <br>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://pengsongyou.github.io">Songyou Peng</a><sup>1,2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block">
+              <a href="https://www.maxjiang.ml/">Chiyu "Max" Jiang</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block">
+              <a href="https://yiyiliao.github.io">Yiyi Liao</a><sup>2,3</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://m-niemeyer.github.io/">Michael Niemeyer</a><sup>2,3</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span><br>
+            <span class="author-block">
+              <a href="https://people.inf.ethz.ch/pomarc/">Marc Pollefeys</a><sup>1,4</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="http://cvlibs.net/">Andreas Geiger</a><sup>2,3</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>ETH Zurich</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>Max Planck Institute for Intelligent Systems</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>3</sup>University of Tübingen</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>4</sup>Microsoft</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2106.03452"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="???"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Short Video (6 min)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="???"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Long Video (13 min)</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/autonomousvision/shape_as_points"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop height="100%">
+        <source src="media/sap/wheel.mp4"
+                type="video/mp4">
+      </video>
+      <br><br><br>
+      <h2 class="subtitle has-text-centered">
+      <strong>Shape-As-Points (SAP)</strong> effcieintly and differentiably bridge oriented point clouds and meshes.
+    </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>TL;DR: SAP is a differentiable version of classic Poisson surface reconstruction, and an interpretable shape representation that efficiently connects points with HQ watertight meshes</b>
+          </p>
+          <p>
+            In recent years, neural implicit representations gained popularity in 3D reconstruction due to their expressiveness and flexibility. 
+            However, the implicit nature of neural implicit representations results in slow inference time and requires careful initialization. 
+            In this paper, we revisit the classic yet ubiquitous point cloud representation and introduce a differentiable point-to-mesh layer using a differentiable formulation of Poisson Surface Reconstruction (PSR) that allows for a GPU-accelerated fast solution of the indicator function given an oriented point cloud. 
+            The differentiable PSR layer allows us to efficiently and differentiably bridge the explicit 3D point representation with the 3D mesh via the implicit indicator field, enabling end-to-end optimization of surface reconstruction metrics such as Chamfer distance. 
+            This duality between points and meshes hence allows us to represent shapes as oriented point clouds, which are explicit, lightweight and expressive. Compared to neural implicit representations, our Shape-As-Points (SAP) model is more interpretable, lightweight, and accelerates inference time by one order of magnitude. 
+            Compared to other explicit representations such as points, patches, and meshes, SAP produces topology-agnostic, watertight manifold surfaces. We demonstrate the effectiveness of SAP on the task of surface reconstruction from unoriented point clouds and learning-based reconstruction.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/k0monzIcjUo?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop height="100%">
+          <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/teaser.mp4"
+                  type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+          free-viewpoint
+          portraits.
+        </h2>
+      </div>
+    </div> -->
+    <!-- Shape Representation Comparison. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <hr>
+        <h2 class="title is-3">Different Shape Representations</h2>
+        <br>
+        <img src="media/sap/shape_rep_comp.png" class="center"/>
+        <div class="content has-text-justified">
+          <br>  
+          <p>
+            Traditional explicit shape representations (e.g. voxels, point clouds or meshes) are usually very efficient during inference, but all to some extent suffer from discretization.
+          </p>
+          <p>
+            Neural implicit representations produce smooth and high-quality shapes, but their inference time is typically very slow due to numerous network evaluations in 3D space.
+          </p>
+          <p>
+          <strong>Shape-As-Points (SAP)</strong> is interpretable, lightweight, topology agnostic, yields high-quality watertight meshes at low inference times and can be initialized from noisy or incomplete observations.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Poisson Equation Intuition.-->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <h2 class="title is-3">Intuition of Poisson Equation</h2>
+        <br>
+        <img src="media/sap/intuition_poisson.png" class="center"/>
+        <div class="content has-text-justified">
+
+          <p>
+            Solving the Poisson equation is the cornerstone of our SAP representation. A shape (we use a circle as an example) can be represented as an implicit indicator function.
+            The premise of the Poisson equation is that:
+          </p>
+          <p><strong>The point normals are an approximation of the gradient of the indicator function</strong>. </p>
+          <p>
+            We use <strong>spectral methods</strong> to solve the Poisson equation. The spetral method is <strong>highly optimized on GPUs/TPUs</strong>. It is extremely simple and can be implemented with <strong>25-line code</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    
+    <!-- Applications.-->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <h2 class="title is-3">Applications</h2>
+      </div>
+    </div>
+    <h3 class="title is-4">Optimization-based 3D Reconstruction</h3>
+    <p>
+      Using <strong>SAP</strong> you can have 3D reconstruction from only noisy unoriented point clouds / scans.
+    </p>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      <img src="media/sap/pipeline_optim.png" class="center"/>
+      </div>
+    </div>
+      <div class="columns is-centered">
+        <!-- Wheel -->
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-6">Wheel (Genus > 0) </h2>
+            <video id="dollyzoom" autoplay controls muted loop height="100%">
+              <source src="media/sap/wheel.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+  
+        <!-- Wheel -->
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-6">Dragon (Real Scan)</h2>
+            <!-- <p>
+              Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+              would be impossible without nerfies since it would require going through a wall.
+            </p> -->
+            <video id="dollyzoom" autoplay controls muted loop height="100%">
+              <source src="media/sap/dragon.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      <!--/ Matting. -->
+    
+    <h3 class="title is-4">Learning-based 3D Reconstruction</h3>
+      <p>
+        You can use <strong>SAP</strong> to learn parameters of a deep neural network. The network can handle large noises and outliers.
+      </p>
+      <br>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <img src="media/sap/pipeline_learn.png" class="center"/>
+        </div>
+        <br>
+      </div>
+      <div class="columns is-centered">
+        <!-- Wheel -->
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-6">Input Point Clouds with Large Noises</h2>
+            <video id="dollyzoom" autoplay controls muted loop height="100%">
+              <source src="media/sap/1_merged.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+  
+        <!-- Wheel -->
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-6">Input Point Clouds with 50% Outliers</h2>
+            <!-- <p>
+              Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+              would be impossible without nerfies since it would require going through a wall.
+            </p> -->
+            <video id="dollyzoom" autoplay controls muted loop height="100%">
+              <source src="media/sap/2_merged.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{Peng2021SAP,
+      author    = {Peng, Songyou and Jiang, Chiyu "Max" and Liao, Yiyi and Niemeyer, Michael and Pollefeys, Marc and Geiger, Andreas},
+      title     = {Shape As Points: A Differentiable Poisson Solver},
+      booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+      year      = {2021}
+}</code></pre>
+  </div>
+</section>
+
+<section class="section" id="Acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+    Andreas Geiger was supported by the <a href="https://cordis.europa.eu/project/id/850533">ERC Starting Grant LEGO-3D (850533)</a> and 
+    <a href="https://gepris.dfg.de/gepris/projekt/390727645?language=en">the DFG EXC number 2064/1 - project number 390727645</a>. 
+    The authors thank the <a href="https://learning-systems.org/">Max Planck ETH Center for Learning Systems (CLS)</a> for supporting Songyou Peng and the <a href="https://imprs.is.mpg.de/">International Max Planck Research School for Intelligent Systems (IMPRS-IS)</a> for supporting Michael Niemeyer.
+This work was supported by an NVIDIA research gift.
+We thank Matthias Niessner, Thomas Funkhouser, Hugues Hopp, Yue Wang for helpful discussions in early stages of this project.
+We also thank Xu Chen, Christian Reiser, Rémi Pautrat for proofreading.
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. 
+            We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
