@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Neural Implicit Scalable Encoding for SLAM">
+  <meta name="keywords" content="NICE-SLAM">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NICE-SLAM</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+
+
+
+  </script> -->
+
+<!-- <link rel="icon" type="image/png" href="media/sap/sap_preview.png">  -->
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./media/nice-slam/css/bulma.min.css">
+  <link rel="stylesheet" href="./media/nice-slam/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./media/nice-slam/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./media/nice-slam/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./media/nice-slam/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./media/nice-slam/js/fontawesome.all.min.js"></script>
+  <script src="./media/nice-slam/js/bulma-carousel.min.js"></script>
+  <script src="./media/nice-slam/js/bulma-slider.min.js"></script>
+  <script src="./media/nice-slam/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://pengsongyou.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://pengsongyou.github.io/conv_onet">
+            ConvONet - ECCV 2020
+          </a>
+          <a class="navbar-item" href="https://pengsongyou.github.io/sap">
+            Shapt As Points - NeurIPS 2021
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">NICE-SLAM<br/>Neural Implicit Scalable Encoding for SLAM</h1>
+          <!-- <div class="column is-full_width"> -->
+            <!-- <h2 class="title is-4">NeurIPS 2021 (Oral)</h2> -->
+          <!-- </div> -->
+          <br>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://pengsongyou.github.io/nice-slam">Zihan Zhu</a><sup>1,2 *</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="https://pengsongyou.github.io">Songyou Peng</a><sup>1,3 *</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+              <a href="http://people.inf.ethz.ch/vlarsson/">Viktor Larsson</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="http://www.cad.zju.edu.cn/home/weiweixu/weiweixu_en.htm">Weiwei Xu</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="http://www.cad.zju.edu.cn/home/bao/">Hujun Bao</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span><br>
+            <span class="author-block">
+              <a href="https://zhpcui.github.io/">Zhaopeng Cui</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="http://people.inf.ethz.ch/moswald/">Martin R. Oswald</a><sup>1,4</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://people.inf.ethz.ch/pomarc/">Marc Pollefeys</a><sup>1,5</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+          </div>
+          <div class="column is-full_width">
+            <h2 class="is-size-6">(* equal contribution)</h2>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>ETH Zurich</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>Zhejiang University</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>3</sup>MPI for Intelligent Systems, Tübingen</span>&nbsp;&nbsp;<br>
+            <span class="author-block"><sup>4</sup>University of Amsterdam</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>5</sup>Microsoft</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2106.03452"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/FL8LMk_qWb4"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/autonomousvision/shape_as_points"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop height="100%">
+        <source src="media/nice-slam/wheel.mp4"
+                type="video/mp4">
+      </video>
+      <br><br><br>
+      <h2 class="subtitle has-text-centered">
+      <strong>NICE-SLAM</strong> produces accurate dense geometry and camera tracking on large-scale scenes.
+    </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>TL;DR: We present NICE-SLAM, a dense RGB-D SLAM system that combines neural implicit decoders with hierarchical grid-based representations, which can be applied to large-scale scenes.</b>
+          </p>
+          <p>
+            Neural implicit representations have recently shown encouraging results in various domains, including promising progress in simultaneous localization and mapping (SLAM). Nevertheless, existing methods produce over-smoothed scene reconstructions and have difficulty scaling up to large scenes. 
+            These limitations are mainly due to their simple fully-connected network architecture that does not incorporate local information in the observations.
+            In this paper, we present NICE-SLAM, a dense SLAM system that incorporates multi-level local information by introducing a hierarchical scene representation. Optimizing this representation with pre-trained geometric priors enables detailed reconstruction on large indoor scenes. Compared to recent neural implicit SLAM systems, our approach is more scalable, efficient, and robust. Experiments on five challenging datasets demonstrate competitive results of NICE-SLAM in both mapping and tracking quality.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/FL8LMk_qWb4?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop height="100%">
+          <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/teaser.mp4"
+                  type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+          free-viewpoint
+          portraits.
+        </h2>
+      </div>
+    </div> -->
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <hr>
+        <h2 class="title is-3">Method</h2>
+        <br>
+        <img src="media/nice-slam/pipeline_overview.png" class="center"/>
+        <div class="content has-text-justified">
+          <br>  
+          <p>
+            Blablabla
+          </p>
+          <p>
+          <strong>NICE-SLAM blablabla</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    
+    <!-- Applications.-->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <h2 class="title is-3">Additional Results</h2>
+      </div>
+    </div>
+    <h3 class="title is-4">Optimization-based 3D Reconstruction</h3>
+    <p>
+      Using <strong>SAP</strong> you can have 3D reconstruction from only noisy unoriented point clouds / scans.
+    </p>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      <img src="media/nice-slam/pipeline_optim.png" class="center"/>
+      </div>
+    </div>
+      <div class="columns is-centered">
+        <!-- Wheel -->
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-6">Wheel (Genus > 0) </h2>
+            <video id="dollyzoom" autoplay controls muted loop height="100%">
+              <source src="media/nice-slam/wheel.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+  
+        <!-- Wheel -->
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-6">Dragon (Real Scan)</h2>
+            <!-- <p>
+              Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+              would be impossible without nerfies since it would require going through a wall.
+            </p> -->
+            <video id="dollyzoom" autoplay controls muted loop height="100%">
+              <source src="media/nice-slam/dragon.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      <!--/ Matting. -->
+    
+    <h3 class="title is-4">Learning-based 3D Reconstruction</h3>
+      <p>
+        You can use <strong>SAP</strong> to learn parameters of a deep neural network. The network can handle large noises and outliers.
+      </p>
+      <br>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <img src="media/nice-slam/pipeline_learn.png" class="center"/>
+        </div>
+        <br>
+      </div>
+      <div class="columns is-centered">
+        <!-- Wheel -->
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-6">Input Point Clouds with Large Noises</h2>
+            <video id="dollyzoom" autoplay controls muted loop height="100%">
+              <source src="media/nice-slam/1_merged.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+  
+        <!-- Wheel -->
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-6">Input Point Clouds with 50% Outliers</h2>
+            <!-- <p>
+              Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+              would be impossible without nerfies since it would require going through a wall.
+            </p> -->
+            <video id="dollyzoom" autoplay controls muted loop height="100%">
+              <source src="media/nice-slam/2_merged.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+</div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{Zhu2021NICESLAM,
+      author    = {Zhu, Zihan and Peng, Songyou and Larsson, Viktor and Xu, Weiwei and Bao, Hujun and Cui, Zhaopeng and Oswald, Martin R. and Pollefeys, Marc},
+      title     = {NICE-SLAM: Neural Implicit Scalable Encoding for SLAM},
+      journal   = arxiv,
+      year      = {2021}
+}</code></pre>
+  </div>
+</section>
+
+<section class="section" id="Acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+    The authors thank the <a href="https://learning-systems.org/">Max Planck ETH Center for Learning Systems (CLS)</a> for supporting Songyou Peng.
+    We also thank Edgar Sucar for providing additional implementation details about iMAP.
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. 
+            We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
