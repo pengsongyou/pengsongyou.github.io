@@ -120,7 +120,7 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>ETH Zurich</span>&nbsp;&nbsp;
-            <span class="author-block"><sup>2</sup>Zhejiang University</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>State Key Lab of CAD&CG, Zhejiang University</span>&nbsp;&nbsp;
             <span class="author-block"><sup>3</sup>MPI for Intelligent Systems, Tübingen</span>&nbsp;&nbsp;<br>
             <span class="author-block"><sup>4</sup>University of Amsterdam</span>&nbsp;&nbsp;
             <span class="author-block"><sup>5</sup>Microsoft</span>
@@ -170,10 +170,11 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop height="100%">
+      <!-- <video id="teaser" autoplay muted loop height="100%">
         <source src="media/nice-slam/wheel.mp4"
                 type="video/mp4">
-      </video>
+      </video> -->
+      <img class="rounded" src="./media/nice-slam/teaser.png" >
       <br><br><br>
       <h2 class="subtitle has-text-centered">
       <strong>NICE-SLAM</strong> produces accurate dense geometry and camera tracking on large-scale scenes.
@@ -242,10 +243,8 @@
         <div class="content has-text-justified">
           <br>  
           <p>
-            Blablabla
-          </p>
-          <p>
-          <strong>NICE-SLAM blablabla</strong>.
+            <strong>NICE-SLAM</strong> takes an RGB-D image stream as input and outputs both the camera pose as well as a learned scene representation in form of a hierarchical feature grid.
+            From <em>right-to-left</em>, our pipeline can be interpreted as a generative model which renders depth and color images from a given scene representation and camera pose. At test time we estimate both the scene representation and camera pose by solving the inverse problem via backpropagating the image and depth reconstruction loss through a differentiable renderer (<em>left-to-right</em>). Both entities are estimated within an alternating optimization: <strong>Mapping:</strong> The backpropagation only updates the hierarchical scene representation; <strong>Tracking:</strong> The backpropagation only updates the camera pose. For better readability we joined the fine-scale grid for geometry encoding with the equally-sized color grid and show them as one grid with two attributes (red and orange).
           </p>
         </div>
       </div>
@@ -259,45 +258,69 @@
         <h2 class="title is-3">Additional Results</h2>
       </div>
     </div>
-    <h3 class="title is-4">Optimization-based 3D Reconstruction</h3>
+    <h3 class="title is-4">ScanNet Dataset</h3>
     <p>
-      Using <strong>SAP</strong> you can have 3D reconstruction from only noisy unoriented point clouds / scans.
+      As can be observed, our NICE-SLAM produces sharper and cleaner geometry. Also, unlike the global update as shown in iMAP, our system can update locally thanks to the grid-based hierarchical representation.
+    </p>
+    <p>
+      &nbsp
     </p>
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-      <img src="media/nice-slam/pipeline_optim.png" class="center"/>
-      </div>
     </div>
       <div class="columns is-centered">
         <!-- Wheel -->
         <div class="column">
-          <div class="content">
-            <h2 class="title is-6">Wheel (Genus > 0) </h2>
-            <video id="dollyzoom" autoplay controls muted loop height="100%">
-              <source src="media/nice-slam/wheel.mp4"
-                      type="video/mp4">
-            </video>
+          <div class="content" center>
+            <h2 class="title is-5 has-text-centered">iMAP* <br> (our re-implementation of iMAP)​ </h2>
+            <!--<p class=" has-text-centered">
+              (our re-implementation of iMAP)​ 
+            </p> -->
           </div>
         </div>
   
         <!-- Wheel -->
         <div class="column">
-          <div class="content">
-            <h2 class="title is-6">Dragon (Real Scan)</h2>
-            <!-- <p>
-              Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-              would be impossible without nerfies since it would require going through a wall.
-            </p> -->
-            <video id="dollyzoom" autoplay controls muted loop height="100%">
-              <source src="media/nice-slam/dragon.mp4"
-                      type="video/mp4">
-            </video>
+          <div class="content" center>
+            <h2 class="title is-5 has-text-centered">NICE-SLAM</h2>
           </div>
         </div>
       </div>
+      <video id="dollyzoom" autoplay controls muted loop height="100%">
+        <source src="media/nice-slam/ScanNet_Compare3.mp4"
+                type="video/mp4">
+      </video>
       <!--/ Matting. -->
+    <p>
+      &nbsp
+    </p>
+
     
-    <h3 class="title is-4">Learning-based 3D Reconstruction</h3>
+    
+      <h3 class="title is-4">Multi-room Apartment</h3>
+      <p>
+        To further evaluate the
+        scalability of our method we capture a sequence in a large
+        apartment with multiple rooms.
+      </p>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths" style="overflow: hidden;" >
+          <video id="dollyzoom" autoplay controls muted loop height="100%">
+            <source src="media/nice-slam/apartment3.mp4"
+                    type="video/mp4" style="margin-top: -40.5%; margin-bottom: -10.5%">
+          </video>
+        </div>
+      </div>
+      <h2 class="title is-5 has-text-centered">Final Reconstruction Result Fly-through</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths" style="overflow: hidden;" >
+          <video id="dollyzoom" autoplay controls muted loop height="100%">
+            <source src="media/nice-slam/flythrough.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    <!-- <h3 class="title is-4">Multi-room Apartment</h3>
       <p>
         You can use <strong>SAP</strong> to learn parameters of a deep neural network. The network can handle large noises and outliers.
       </p>
@@ -309,7 +332,6 @@
         <br>
       </div>
       <div class="columns is-centered">
-        <!-- Wheel -->
         <div class="column">
           <div class="content">
             <h2 class="title is-6">Input Point Clouds with Large Noises</h2>
@@ -320,14 +342,10 @@
           </div>
         </div>
   
-        <!-- Wheel -->
         <div class="column">
           <div class="content">
             <h2 class="title is-6">Input Point Clouds with 50% Outliers</h2>
-            <!-- <p>
-              Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-              would be impossible without nerfies since it would require going through a wall.
-            </p> -->
+
             <video id="dollyzoom" autoplay controls muted loop height="100%">
               <source src="media/nice-slam/2_merged.mp4"
                       type="video/mp4">
@@ -335,6 +353,54 @@
           </div>
         </div>
       </div>
+ -->
+
+      <h3 class="title is-4">Co-fusion Dataset (Robustness to Dynamic Objects)</h3>
+      <p>
+        <strong> NICE-SLAM </strong> is able to handle dynamic objects. Note that the airship and toy car is not wrongly reconstructed.
+      </p>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths"  >
+          <video id="dollyzoom" autoplay controls muted loop height="100%" >
+            <source src="media/nice-slam/cofusion3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+       
+      </div>
+
+      <h3 class="title is-4">Robustness to Frame Loss​</h3>
+      <p>
+        Here, we simulate large frame lost. The video show current tracking camera pose as well as rendered images for each tracking iteration. The ground truth camera is shown in black, the current tracking camera is shown in red. 
+        We can notice that NICE-SLAM is able to fast recover the camera pose thanks to the prediction from the coarse-level (shown in <span style="color: #00CFC1">cyan</span>).
+        <br>
+      </p>
+      <p>
+        &nbsp
+      </p>
+      <div class="columns is-centered">
+        <!-- Wheel -->
+        <div class="column">
+          <div class="content" center>
+            <h2 class="title is-5 has-text-centered">iMAP* <br> (our re-implementation of iMAP)​ </h2>
+            <!--<p class=" has-text-centered">
+              (our re-implementation of iMAP)​ 
+            </p> -->
+          </div>
+        </div>
+  
+        <!-- Wheel -->
+        <div class="column">
+          <div class="content" center>
+            <h2 class="title is-5 has-text-centered">NICE-SLAM</h2>
+          </div>
+        </div>
+      </div>
+      <video id="dollyzoom" autoplay controls muted loop height="100%">
+            <source src="media/nice-slam/lost_frame3.mp4"
+                    type="video/mp4">
+      </video>
+   
 </div>
 </section>
 
@@ -355,7 +421,7 @@
   <div class="container is-max-desktop content">
     <h2 class="title">Acknowledgements</h2>
     The authors thank the <a href="https://learning-systems.org/">Max Planck ETH Center for Learning Systems (CLS)</a> for supporting Songyou Peng.
-    We also thank Edgar Sucar for providing additional implementation details about iMAP.
+    We also thank Edgar Sucar for providing additional implementation details about iMAP. Special thanks to Chi Wang for offering the data collection site.
   </div>
 </section>
 
