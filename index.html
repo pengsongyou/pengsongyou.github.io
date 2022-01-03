@@ -99,7 +99,7 @@
         <p>
           I am a PhD student at <a href="https://ethz.ch/en.html">ETH Zurich</a> and <a href="https://is.tuebingen.mpg.de/">Max Planck Institute for Intelligent Systems</a> under <a href="https://learning-systems.org/">Max Planck ETH Center for Learning Systems</a> & <a href="https://ellis.eu/">ELLIS</a>. I am co-supervised by <a href="https://inf.ethz.ch/personal/marc.pollefeys/"><strong>Marc Pollefeys</strong></a> and <a href="http://www.cvlibs.net/"><strong>Andreas Geiger</strong></a>. 
           <!-- I am currently a research intern at <a href="https://research.fb.com/category/augmented-reality-virtual-reality/">Facebook Reality Labs (FRL)</a>. -->
-          I am currently a research intern at <a href="https://about.facebook.com/meta/">Meta</a> | <a href="https://about.facebook.com/realitylabs/">Reality Labs Research</a>.
+          I am currently a research intern at <a href="https://about.facebook.com/meta/">Meta</a> <a href="https://about.facebook.com/realitylabs/">Reality Labs Research</a>.
           <!-- I am currently working at <a href="http://www.cvlibs.net/">Autonomous Vision Group (AVG)</a> at MPI Tubingen. -->
           <!-- I am currently working at <a href="https://cvg.ethz.ch">Computer Vision & Geometry Group</a> at ETH Zurich. -->
         </p>  
@@ -211,7 +211,58 @@
       </table>
     
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
-    <tr onmouseout="sap_stop()" onmouseover="sap_start()">  
+    
+        <tr onmouseout="nice_stop()" onmouseover="nice_start()">  
+          <td width="25%">
+            <div class="one">
+            <div class="two" id = 'nice_shape'>
+            <video  width="160" height="90" muted autoplay loop>
+                <source src="media/nice_teaser.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video></div>
+            <img src='media/nice_teaser.jpg' width="160" height="90"></div>
+            <script type="text/javascript">
+            function nice_start() { 
+            document.getElementById('nice_shape').style.opacity = "1";
+            }
+            function nice_stop() { 
+            document.getElementById('nice_shape').style.opacity = "0"; 
+            }
+      nice_stop()
+            </script>
+            </script>
+          </td>
+          <td valign="top" width="75%">
+              <a href="https://pengsongyou.github.io/nice-slam">
+                <papertitle>
+                  NICE-SLAM: Neural Implicit Scalable Encoding for SLAM
+                </papertitle>
+              </a>
+          <br>
+              <a href="https://scholar.google.com/citations?user=0ffZwQ8AAAAJ&hl=en">Zihan Zhu</a>*,
+              <strong>Songyou Peng*</strong>,
+              <a href="http://people.inf.ethz.ch/vlarsson/">Viktor Larsson</a>,
+              <a href="http://www.cad.zju.edu.cn/home/weiweixu/weiweixu_en.htm"> Weiwei Xu</a>,
+              <a href="http://www.cad.zju.edu.cn/home/bao/"> Hujun Bao</a>,
+              <a href="https://zhpcui.github.io/"> Zhaopeng Cui</a>,
+              <a href="http://people.inf.ethz.ch/moswald/"> Martin R. Oswald</a>,
+              <a href="https://inf.ethz.ch/personal/marc.pollefeys/">Marc Pollefeys</a>
+          <br>
+              <em><strong>arXiv</strong></em>, 2021 (* equal contribution)
+          <br>
+            <a href="https://arxiv.org/abs/2112.12130">paper</a> |
+            <a href="https://pengsongyou.github.io/nice-slam">project page</a>
+            <!-- <a href="https://youtu.be/FL8LMk_qWb4">video (6 min)</a> | -->
+            <!-- <a href="https://github.com/autonomousvision/shape_as_points">code</a> -->
+            <p></p>
+            A neural implicit-based RGB-D SLAM that can be applied to large-scale scenes.
+            <p></p>
+          </td>
+        </tr>
+    
+    
+    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+      <tr onmouseout="sap_stop()" onmouseover="sap_start()">  
       <td width="25%">
         <div class="one">
         <div class="two" id = 'sap_shape'>
@@ -715,22 +766,52 @@
       </tr>
   </table>
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
-    <tr onmouseout="dpcon_stop()" onmouseover="dpcon_start()">  
+    <tr onmouseout="gsap_stop()" onmouseover="gsap_start()">  
       <td width="25%">
         <div class="one">
-        <div class="two" id = 'dpcon_shape'>
-        <img src='media/games.png' width="160" height="100"></div>
-        <img src='media/games.png' width="160" height="100"></div>
+        <div class="two" id = 'gsap_shape'>
+        <img src='media/games_sap.jpg' width="180" height="100"></div>
+        <img src='media/games_sap.jpg' width="180" height="100"></div>
         </div>
         <script type="text/javascript">
-        function dpcon_start() { 
-        document.getElementById('dpcon_shape').style.opacity = "1";
+        function gsap_start() { 
+        document.getElementById('gsap_shape').style.opacity = "1";
         }
-        function dpcon_stop() { 
-        document.getElementById('dpcon_shape').style.opacity = "0"; 
+        function gsap_stop() { 
+        document.getElementById('gsap_shape').style.opacity = "0"; 
         }
-        dpcon_stop()
+        gsap_stop()
         </script>
+      </td>
+      <td valign="top" width="75%">
+          <a href="media/sap/SAP_NeurIPS_GAMES.pdf">
+            <papertitle>Shape As Points: A Differentiable Poisson Solver</papertitle></a>
+      <br>
+          <strong>Songyou Peng</strong>
+      <br>
+          <em> Graphics And Mixed Environment Seminar (<strong>GAMES</strong>)</em>, 2021
+      <br>
+        <a href="media/sap/SAP_NeurIPS_GAMES.pdf">slides</a> |
+        <a href="https://www.bilibili.com/video/BV1f54y1H7cY">talk (in Chinese)</a>
+      </td>
+    </tr>
+  <!-- </table> -->
+  <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" > -->
+    <tr onmouseout="gnerf_stop()" onmouseover="gnerf_start()">  
+      <td width="25%">
+        <div class="one">
+        <div class="two" id = 'gnerf_shape'>
+        <img src='media/games_nerf.png' width="160" height="100"></div>
+        <img src='media/games_nerf.png' width="160" height="100"></div>
+        </div>
+        <script type="text/javascript">
+        function gnerf_start() { 
+        document.getElementById('gnerf_shape').style.opacity = "1";
+        }
+        function gnerf_stop() { 
+        document.getElementById('gnerf_shape').style.opacity = "0"; 
+        }
+        gnerf_stop()
         </script>
       </td>
       <td valign="top" width="75%">
@@ -742,11 +823,10 @@
           <em> Graphics And Mixed Environment Seminar (<strong>GAMES</strong>)</em>, 2021
       <br>
         <a href="files/Towards_Practical_Application_of_NeRF.pdf">slides</a> |
-        <a href="https://www.bilibili.com/video/BV1f54y1H7cY">talk (in Chinese)</a>
-        
-        
+        <a href="https://www.bilibili.com/video/BV1f54y1H7cY">talk (in Chinese)</a>   
       </td>
     </tr>
+  </table>
 
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
       <tr>
@@ -808,7 +888,7 @@
         function pepper_stop() {
         document.getElementById('pepper_gif').style.opacity = "0";
         }
-        personality_stop()
+        pepper_stop()
         </script>
         </script>
       </td>
