@@ -857,7 +857,36 @@
     <heading>Invited Talks</heading>
     <!-- <p></p> -->
     <br><br><br>
-      
+    
+    <tr onmouseout="adobe_stop()" onmouseover="adobe_start()">  
+      <td width="25%">
+        <div class="one">
+        <div class="two" id = 'gnerf_shape'>
+        <img src='media/talk_adobe.jpg' width="180" height="100"></div>
+        <img src='media/talk_adobe.jpg' width="180" height="100"></div>
+        </div>
+        <script type="text/javascript">
+        function adobe_start() { 
+        document.getElementById('adobe_shape').style.opacity = "1";
+        }
+        function adobe_stop() { 
+        document.getElementById('adobe_shape').style.opacity = "0"; 
+        }
+        adobe_stop()
+        </script>
+      </td>
+      <td valign="top" width="75%">
+          <a href="files/talk_adobe.pdf">
+            <papertitle>Towards Practical Applications of NeRF</papertitle></a>
+      <br>
+          <strong>Songyou Peng</strong>
+      <br>
+          <em> Adobe Research</em>, 2022
+      <br>
+        <a href="files/talk_adobe.pdf">slides</a>
+      </td>
+    </tr>
+
     <tr>
       <tr onmouseout="basel_stop()" onmouseover="basel_start()">  
       <td width="25%">
