@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="OpenScene: 3D Scene Understanding with Open Vocabularies">
+  <meta name="keywords" content="OpenScene">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenScene</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+
+
+
+  </script> -->
+
+<link rel="icon" type="image/png" href="media/openscene/logo.png"> 
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./media/nice-slam/css/bulma.min.css">
+  <link rel="stylesheet" href="./media/nice-slam/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./media/nice-slam/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./media/nice-slam/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./media/nice-slam/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./media/nice-slam/js/fontawesome.all.min.js"></script>
+  <script src="./media/nice-slam/js/bulma-carousel.min.js"></script>
+  <script src="./media/nice-slam/js/bulma-slider.min.js"></script>
+  <script src="./media/nice-slam/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://pengsongyou.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://pengsongyou.github.io/conv_onet">
+            ConvONet - ECCV 2020
+          </a>
+          <a class="navbar-item" href="https://pengsongyou.github.io/sap">
+            Shapt As Points - NeurIPS 2021
+          </a>
+          <a class="navbar-item" href="https://pengsongyou.github.io/nice-slam">
+            NICE-SLAM - CVPR 2022
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <!-- <div class="columns is-centered">
+        <div class="column is-7 has-text-centered">
+          <img src="media/nice-slam/nice-slam-logo2.png" alt="NICE-SLAM"/>
+        </div>
+      </div> -->
+        <div class="column has-text-centered">
+          <!-- <h1 class="title is-1 publication-title"><img src="media/nice-slam/like.png" width="90">NICE-SLAM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Neural Implicit Scalable Encoding for SLAM</h1> -->
+          <h1 class="title is-1 publication-title"><img src="media/openscene/logo.png" width="70">OpenScene&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+          <h1 class="title is-2 publication-title">3D Scene Understanding with Open Vocabularies</h1>
+          <div class="column is-full_width">
+            <!-- <h2 class="title is-4">CVPR 2022</h2> -->
+          </div>
+          <!-- <br> -->
+          <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://pengsongyou.github.io">Songyou Peng</a><sup>1,2,3 </sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+              <a href="https://www.kylegenova.com/">Kyle Genova</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+            <span class="author-block">
+              <a href="https://www.maxjiang.ml/">Chiyu "Max" Jiang</a><sup>4</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block">
+              <a href="https://taiya.github.io/">Andrea Tagliasacchi</a><sup>1,5</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span><br>
+            <span class="author-block">
+              <a href="https://people.inf.ethz.ch/pomarc/">Marc Pollefeys</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://people.inf.ethz.ch/pomarc/">Thomas Funkhouser</a><sup>1</sup>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Google Research</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>ETH Zurich</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>3</sup>MPI for Intelligent Systems, Tübingen</span>&nbsp;&nbsp;<br>
+            <span class="author-block"><sup>4</sup>Waymo LLC</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>5</sup>Simon Fraser University</span>
+          </div>
+
+          <!-- <div class="column is-full_width">
+            <h2 class="is-size-6">(* Work done while Songyou was an intern at Google Research.)</h2>
+          </div> -->
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/xxx" target="_blank"
+                   class="button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Supp Link. -->
+              <span class="link-block">
+                <a href="xxx" target="_blank"
+                   class="button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Supplementary Material</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://youtu.be/V5hYTz5os0M"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+               <span class="link-block">
+                <a href="https://github.com/pengsongyou/openscene" target="_blank"
+		   class="external-link button is-normal is-rounded is-dark" style="background-color: #808080">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span >Code</span>
+                  </a>
+              </span> 
+            </div>
+
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="media/openscene/teaser.jpg" class="center"/>
+      <br><br>
+      <h2 class="subtitle has-text-centered">
+      <strong>OpenScene</strong> is a zero-shot approach to perform novel 3D scene understanding tasks with open-vocabulary queries.
+    </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+        <!-- Paper video. -->
+        <div class="columns is-centered has-text-centered">
+          <!-- <div class="column is-four-fifths"> -->
+            <div class="column is-full_width">
+            <h2 class="title is-3">Explanatory Video</h2>
+            <div class="publication-video">
+              <!-- <iframe src="https://www.youtube.com/embed/V5hYTz5os0M?rel=0&amp;showinfo=0"
+                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+                <video id="dollyzoom" controls loop width="100%">
+                  <source src="media/openscene/OpenScene_video_full_compressed.mp4"
+                          type="video/mp4">
+                </video>
+            </div>
+          </div>
+        </div>
+        <!--/ Paper video. -->
+      
+    <br>
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>TL;DR: We present OpenScene, a zero-shot approach to perform novel 3D scene understanding tasks with open-vocabulary queries.</b>
+          </p>
+          <p>
+            Traditional 3D scene understanding approaches rely on
+            labeled 3D datasets to train a model for a single task with
+            supervision. We propose OpenScene, an alternative approach where a model predicts dense features for 3D scene
+            points that are co-embedded with text and image pixels in
+            CLIP feature space. This zero-shot approach enables taskagnostic training and open-vocabulary queries. For example, to perform SOTA zero-shot 3D semantic segmentation
+            it first infers CLIP features for every 3D point and later
+            classifies them based on similarities to embeddings of arbitrary class labels. More interestingly, it enables a suite
+            of open-vocabulary scene understanding applications that
+            have never been done before. For example, it allows a user
+            to enter an arbitrary text query and then see a heat map
+            indicating which parts of a scene match. Our approach is
+            effective at identifying objects, materials, affordances, activities, and room types in complex 3D scenes, all using a
+            single model trained without any labeled 3D data.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Key Idea -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <hr>
+        <h2 class="title is-3">Key Idea</h2>
+        <br>
+        <img src="media/openscene/coembedding.jpg" class="center"/>
+        <div class="content has-text-justified">
+          <br>  
+          <p>
+            Our key idea to address this broad set of applications is to compute a task-agnostic feature vector for every 3D point that is co-embedded with text and images pixels in the CLIP feature space.
+            After, we can use the structure of the CLIP feature space to reason about properties of 3D points in the scene.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    
+      <!-- Method -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+          <br>
+          <img src="media/openscene/overview.png" class="center"/>
+          <div class="content has-text-justified">
+            <br>  
+            <p>
+              <strong>How to produce text-image-3D co-embeddings?</strong>
+              <br>  
+              1. <em>Multi-view feature fusion</em>. Given a point in a 3D scene and its corresponding posed images, we first use the CLIP-based image semantic segmentation model (LSeg/OpenSeg) to extract per-pixel features for every image, and then use multi-view fusion with weighted averaging to project the fused feature to 3D points.
+              <br>  
+              2. <em>3D Distillation</em>. To take full advantage of the 3D nature of the data, we also distill a 3D Sparse UNet, with a cosine similarity loss to predict the 2D fused features from only 3D point positions.
+              <br>  
+              3. <em>2D-3D Ensemble</em>. we ensemble the 2D fused and 3D distilled features to a single feature vector for every point based on similarity scores to a labelset.
+
+            </p>
+          </div>
+        </div>
+      </div>
+  
+    <!-- Applications.-->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <h2 class="title is-3">Demo</h2>
+      </div>
+    </div>
+      <video id="dollyzoom" controls muted loop height="100%">
+        <source src="media/openscene/demo_full_compressed.mp4"
+                type="video/mp4">
+      </video>
+      Here we show a <strong>real-time, interactive open-vocabulary search tool</strong>
+where a user types in an arbitrary query phrase in the upper left of the screen,
+like "floor" or "bed" or "toilet",
+and the tool colors all 3D points based on the similarities of their
+features to the CLIP encoding of the query.
+Yellow is <strong><span style="color:#e5de00;">highest</span></strong> similarity, green is <strong><span style="color:#008000;">middle</span></strong>, blue is <strong><span style="color:#0000FF;">low</span></strong>, and uncolored is lowest.
+
+</div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{Peng2022OpenScene,
+      author    = {Peng, Songyou and Genova, Kyle and Jiang, Chiyu "Max" and Tagliasacchi, Andrea and Pollefeys, Marc and Funkhouser, Thomas},
+      title     = {OpenScene: 3D Scene Understanding with Open Vocabularies},
+      booktitle = arXiv,
+      year      = {2022}
+  }</code></pre>
+  </div>
+</section>
+
+<section class="section" id="Acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+    We sincerely thank Golnaz Ghiasi for providing guidance of using OpenSeg model. We also thank Yin Cui, Xiuye Gu, Leonidas Guibas,
+    , Nilesh Kulkarni, Abhijit Kundu, Guandao Yang, Xiaoshuai Zhang, and Zihan Zhu for helpful discussion. We are thankful for the proofreading by Charles R. Qi and Paul-Edouard Sarlin.
+    The project logo was created by <a href="https://www.flaticon.com/free-icon/door_2237440?term=door&page=1&position=2&page=1&position=2&related_id=2237440&origin=tag" title="door icons">Door icons created by Good Ware - Flaticon</a>.
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. 
+            We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
