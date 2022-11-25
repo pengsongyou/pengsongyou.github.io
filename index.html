@@ -251,6 +251,103 @@
 
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     
+        <tr onmouseout="openscene_stop()" onmouseover="openscene_start()">  
+          <td width="25%">
+            <div class="one">
+            <div class="two" id = 'openscene_shape'>
+            <video  width="166" height="117" muted autoplay loop>
+                <source src="media/openscene_teaser.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video></div>
+            <img src='media/openscene_teaser2.jpg' width="166" height="117"></div>
+            <script type="text/javascript">
+            function openscene_start() { 
+            document.getElementById('openscene_shape').style.opacity = "1";
+            }
+            function openscene_stop() { 
+            document.getElementById('openscene_shape').style.opacity = "0"; 
+            }
+            openscene_stop()
+            </script>
+          </td>
+          <td valign="top" width="75%">
+              <a href="https://pengsongyou.github.io/openscene">
+                <papertitle>
+                  OpenScene: 3D Scene Understanding with Open Vocabularies
+                </papertitle>
+              </a>
+          <br>
+              <strong>Songyou Peng</strong>, 
+              <a href="https://www.kylegenova.com/">Kyle Genova</a>, 
+              <a href="https://www.maxjiang.ml/">Chiyu "Max" Jiang</a>, 
+              <a href="https://taiya.github.io/">Andrea Tagliasacchi</a>, 
+              <a href="https://people.inf.ethz.ch/pomarc/">Marc Pollefeys</a>,
+              <a href="https://www.cs.princeton.edu/~funk/">Thomas Funkhouser</a>
+          <br>
+              <em>arXiv</em>, 2022
+            <br>
+            <a href="media/openscene/OpenScene.pdf">paper</a> |
+            <a href="https://pengsongyou.github.io/openscene">project page</a> 
+            <!-- <a href="https://youtu.be/V5hYTz5os0M">video</a> |
+            <a href="https://github.com/cvg/nice-slam">code</a> -->
+            <p></p>
+            Zero-shot approach for novel 3D scene understanding tasks with open-vocabulary queries.
+            <p></p>
+          </td>
+        </tr>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+    
+          <tr onmouseout="dreamer_stop()" onmouseover="dreamer_start()">  
+            <td width="25%">
+              <div class="one">
+              <div class="two" id = 'dreamer_shape'>
+                <center>
+              <video  width="140" height="140" muted autoplay loop>
+                  <source src="media/dreamer_teaser.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video></center></div>
+                  <p style="text-align:center;">
+              <img src='media/dreamer_teaser.jpg' width="140" height="140"></p></div>
+              <script type="text/javascript">
+              function dreamer_start() { 
+              document.getElementById('dreamer_shape').style.opacity = "1";
+              }
+              function dreamer_stop() { 
+              document.getElementById('dreamer_shape').style.opacity = "0"; 
+              }
+              dreamer_stop()
+              </script>
+            </td>
+            <td valign="top" width="75%">
+                <a href="https://primecai.github.io/diffdreamer">
+                  <papertitle>
+                    DiffDreamer: Consistent Single-view Perpetual View Generation with Conditional Diffusion Models
+                  </papertitle>
+                </a>
+            <br>
+                <a href="https://primecai.github.io/">Shengqu Cai</a>,
+                <a href="https://ericryanchan.github.io/">Eric R. Chan</a>, 
+                <strong>Songyou Peng</strong>, 
+                <a href="https://people.ee.ethz.ch/~mshahbazi/">Mohamad Shahbazi</a>, 
+                <a href="https://www.obukhov.ai/">Anton Obukhov</a>,
+                <a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html">Luc Van Gool</a>,
+                <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>
+            <br>
+                <em>arXiv</em>, 2022
+              <br>
+              <a href="https://arxiv.org/abs/2211.12131">paper</a> |
+              <a href="https://primecai.github.io/diffdreamer">project page</a> 
+              <!-- <a href="https://youtu.be/V5hYTz5os0M">video</a> |
+              <a href="https://github.com/cvg/nice-slam">code</a> -->
+              <p></p>
+              A diffusion-model based unsupervised framework capable of synthesizing novel views depicting a long camera trajectory.
+              <p></p>
+            </td>
+          </tr>
+      
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+    
         <tr onmouseout="mono_stop()" onmouseover="mono_start()">  
           <td width="25%">
             <div class="one">
@@ -267,7 +364,7 @@
             function mono_stop() { 
             document.getElementById('mono_shape').style.opacity = "0"; 
             }
-      nice_stop()
+      mono_stop()
             </script>
           </td>
           <td valign="top" width="75%">
