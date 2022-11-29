@@ -298,6 +298,52 @@
 
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     
+          <tr onmouseout="patch_stop()" onmouseover="patch_start()">  
+            <td width="25%">
+              <div class="one">
+              <div class="two" id = 'patch_shape'>
+                <center>
+                  <video  width="160" height="134" muted autoplay loop>
+                      <source src="media/patch_teaser.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                      </video></center></div>
+                      <p style="text-align:center;">
+                  <img src='media/patch_teaser.jpg' width="160" height="134"></p></div>
+              <script type="text/javascript">
+              function patch_start() { 
+              document.getElementById('patch_shape').style.opacity = "1";
+              }
+              function patch_stop() { 
+              document.getElementById('patch_shape').style.opacity = "0"; 
+              }
+              patch_stop()
+              </script>
+            </td>
+            <td valign="top" width="75%">
+                <a href="https://l1346792580123.github.io/nccsfs/">
+                  <papertitle>
+                    PatchShading: High-Quality Human Reconstruction by Patch Warping and Shading Refinement
+                  </papertitle>
+                </a>
+            <br>
+                <a href="https://github.com/l1346792580123/">Lixiang Lin</a>, 
+                <strong>Songyou Peng</strong>, 
+                <a href="https://www.google.com/search?q=Qijun+Gan+ZJU">Qijun Gan</a>, 
+                <a href="https://jkzhu.github.io/">Jianke Zhu</a>
+            <br>
+                <em>arXiv</em>, 2022
+              <br>
+              <a href="https://arxiv.org/abs/2211.14485">paper</a> |
+              <a href="https://l1346792580123.github.io/nccsfs/">project page</a> 
+              <p></p>
+              Shape As Points (SAP) for fast human body reconstruction.
+              <p></p>
+            </td>
+          </tr>
+  
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+    
           <tr onmouseout="dreamer_stop()" onmouseover="dreamer_start()">  
             <td width="25%">
               <div class="one">
