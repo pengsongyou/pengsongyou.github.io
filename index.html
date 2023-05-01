@@ -207,7 +207,8 @@
         <td>
           <heading>News</heading>
             <ul>
-              <li><strong>02/2023</strong> Our paper <img src="media/openscene/logo.png" width="20"><a href="https://pengsongyou.github.io/openscene"><strong>OpenScene</strong></a> is accepted to <strong>CVPR 2023</strong>! </li>
+              <li><strong>03/2023</strong> I am co-organizing <a href="https://opensun3d.github.io/"><strong>OpenSUN3D</strong>: 1st Workshop on Open-Vocabulary 3D Scene Understanding</a> in <strong>ICCV 2023</strong>.</li>
+              <li><strong>02/2023</strong> Our paper <img src="media/openscene/logo.png" width="20"><a href="https://pengsongyou.github.io/openscene"><strong>OpenScene</strong></a> is accepted to <strong>CVPR 2023</strong>!</li>
               <li><strong>10/2022</strong> Invited to give a talk on large-scale scene reconstruction with NeRF at <a href="https://www.computationalimaging.org/">Stanford University</a> (<a href="files/talk_stanford.pdf">Slides</a>). </li>
               <li><strong>09/2022</strong> Our paper <a href="https://niujinshuchong.github.io/monosdf/"><strong>MonoSDF</strong></a> is accepted to <strong>NeurIPS 2022</strong>. </li>
               <li><strong>09/2022</strong> Invited to give a talk on neural rendering at <a href="https://research.adobe.com/">Adobe Research</a> (<a href="files/talk_adobe.pdf">Slides</a>). </li>
@@ -217,7 +218,7 @@
               <li><strong>03/2022</strong> Our paper <img src="media/nice-slam/like.png" width="20"><a href="https://pengsongyou.github.io/nice-slam"><strong>NICE-SLAM</strong></a> is accepted to <strong>CVPR 2022</strong>! </li>
               <li><strong>02/2022</strong> Invited to talk about <a href="https://pengsongyou.github.io/sap">Shape As Points</a> at <a href="https://twitter.com/talking_papers">Talking Papers Podcast</a>. Great chat with <a href="https://www.itzikbs.com/">Yizhak Ben-Shabat</a>!</li>
               <li><strong>12/2021</strong> Gave a talk again this year at <a href="http://games-cn.org/games-webinar-20211230-214/">GAMES Seminar Series</a> on <a href="https://pengsongyou.github.io/sap">Shape As Points</a>.</li>
-              <li><strong>09/2021</strong> Our <a href="https://pengsongyou.github.io/sap">Shape As Points</a> is accepted to NeurIPS 2021 as <span style="color:#ff0000;"><strong>oral presentation</strong></span> <strong>(top 0.6%)</strong>!</li>
+              <li><strong>09/2021</strong> Our <a href="https://pengsongyou.github.io/sap"><strong>Shape As Points</strong></a> is accepted to NeurIPS 2021 as <span style="color:#ff0000;"><strong>oral presentation</strong></span> <strong>(top 0.6%)</strong>!</li>
               <!-- <li><strong>09/2021</strong> <span style="color:#ff0000;"><strong>New!</strong></span> Our <a href="https://arxiv.org/abs/2106.03452">Shape As Points</a> is accepted to NeurIPS 2021 as <span style="color:#ff0000;"><strong>oral presentation</strong></span> <strong>(top 0.6%)</strong>!</li> -->
               <a href="javascript:toggleblock(&#39;old_news&#39;)">---- show more ----</a>
               <div id="old_news" style="display: none;">
@@ -270,7 +271,7 @@
           <td valign="top" width="75%">
               <a href="https://pengsongyou.github.io/openscene">
                 <papertitle>
-                  OpenScene: 3D Scene Understanding with Open Vocabularies
+                  <img src="media/openscene/logo.png" width="20"> OpenScene: 3D Scene Understanding with Open Vocabularies
                 </papertitle>
               </a>
           <br>
@@ -289,6 +290,52 @@
             <a href="https://github.com/pengsongyou/openscene">code</a>
             <p></p>
             Zero-shot approach for novel 3D scene understanding tasks with open-vocabulary queries.
+            <p></p>
+          </td>
+        </tr>
+
+        <tr onmouseout="sdfstudio_stop()" onmouseover="sdfstudio_start()">  
+          <td width="25%">
+            <div class="one">
+            <div class="two" id = 'sdfstudio_shape'>
+            <video  width="166" height="108" muted autoplay loop>
+                <source src="media/sdfstudio_garden.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video></div>
+            <img src='media/sdfstudio_garden.jpg' width="166" height="108"></div>
+            <script type="text/javascript">
+            function sdfstudio_start() { 
+            document.getElementById('sdfstudio_shape').style.opacity = "1";
+            }
+            function sdfstudio_stop() { 
+            document.getElementById('sdfstudio_shape').style.opacity = "0"; 
+            }
+            sdfstudio_stop()
+            </script>
+          </td>
+          <td valign="top" width="75%">
+              <a href="https://autonomousvision.github.io/sdfstudio/">
+                <papertitle>
+                  <img src="media/sdfstudio_logo.png" width="90">: A Unified Framework for Surface Reconstruction
+                </papertitle>
+              </a>
+          <br>
+          <a href="https://niujinshuchong.github.io/">Zehao Yu</a>, 
+          <a href="https://apchenstu.github.io/">Anpei Chen</a>, 
+          <a href="https://bozidarantic.com/">Bozidar Antic</a>, 
+          <strong>Songyou Peng</strong>, 
+          <a href="https://apratimbhattacharyya18.github.io/">Apratim Bhattacharyya</a>, 
+          <a href="https://m-niemeyer.github.io/">Michael Niemeyer</a>, 
+          <a href="https://vlg.inf.ethz.ch/">Siyu Tang</a>, 
+          <a href="https://tsattler.github.io/">Torsten Sattler</a>, 
+          <a href="http://cvlibs.net/">Andreas Geiger</a>
+          <br>
+          <em>Open Source Project, 2023</em>
+            <br>
+            <a href="https://autonomousvision.github.io/sdfstudio/">project page</a> |
+            <a href="https://github.com/autonomousvision/sdfstudio">code</a>
+            <p></p>
+            We provide a unified framework and benchmark for neural implicit surface reconstruction.
             <p></p>
           </td>
         </tr>
@@ -460,7 +507,7 @@
           <td valign="top" width="75%">
               <a href="https://pengsongyou.github.io/nice-slam">
                 <papertitle>
-                  NICE-SLAM: Neural Implicit Scalable Encoding for SLAM
+                  <img src="media/nice-slam/like.png" width="20"> NICE-SLAM: Neural Implicit Scalable Encoding for SLAM
                 </papertitle>
               </a>
           <br>
@@ -1385,6 +1432,7 @@
             <td>
               
               <ul>
+                  <li> <strong>Workshop Organizer</strong>: <a href="https://opensun3d.github.io/">OpenSUN3D</a> at ICCV'23 <br>
                   <li> <strong>Conference Reviewer</strong>: CVPR, ICCV, ECCV, ICLR, NeurIPS, SIGGRAPH <br>
                   <li> <strong>Journal Reviewer</strong>: TPAMI, CVIU
               </ul>
