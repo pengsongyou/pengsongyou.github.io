@@ -306,7 +306,66 @@
           </td>
         </tr>
       
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+    
+          <tr onmouseout="boft_stop()" onmouseover="boft_start()">  
+            <td width="25%">
+              <div class="one">
+              <div class="two" id = 'boft_shape'>
+                <center>
+                  <video  width="130" height="130" muted autoplay loop>
+                      <source src="media/boft_teaser.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                      </video></center></div>
+                      <p style="text-align:center;">
+                  <img src='media/boft_teaser.jpg' width="130" height="130"></p></div>
+              <script type="text/javascript">
+              function boft_start() { 
+              document.getElementById('boft_shape').style.opacity = "1";
+              }
+              function boft_stop() { 
+              document.getElementById('boft_shape').style.opacity = "0"; 
+              }
+              boft_stop()
+              </script>
+            </td>
+            <td valign="top" width="75%">
+                <a href="https://boft.wyliu.com/">
+                  <papertitle>
+                    Parameter-Efficient Orthogonal Finetuning via Butterfly Factorization
+                  </papertitle>
+                </a>
+            <br>
+            <a href="https://wyliu.com/">Weiyang Liu</a>*, 
+            <a href="https://github.com/Zeju1997">Zeju Qiu</a>*, 
+            <a href="https://github.com/yfeng95">Yao Feng</a>**, 
+            <a href="https://xiuyuliang.cn/">Yuliang Xiu</a>**, 
+            <a href="https://yuxuan-xue.com/">Yuxuan Xue</a>**, 
+            <a href="https://yulonghui.github.io/">Longhui Yu</a>**,
+            <a href="https://ps.is.mpg.de/person/hfeng">Haiwen Feng</a>, 
+            <a href="https://itszhen.com/">Zhen Liu</a>, 
+            <a href="https://sites.google.com/view/juyeonheo">Juyeon Heo</a>,
+            <strong>Songyou Peng</strong>, 
+            <a href="https://ydwen.github.io/">Yandong Wen</a>, 
+            <a href="https://ps.is.mpg.de/person/black">Michael J. Black</a>, 
+            <a href="https://mlg.eng.cam.ac.uk/adrian/">Adrian Weller</a>, 
+            <a href="https://is.mpg.de/~bs">Bernhard Schölkopf</a>
+            <br>
+            (*/** equal contribution)
+            <br>
+            <em>International Conference on Learning Representations (<strong>ICLR</strong>)</em>, 2024
+              <br>
+              <a href="https://arxiv.org/abs/2311.06243">paper</a> |
+              <a href="https://boft.wyliu.com/">project page</a> |
+              <a href="https://github.com/wy1iu/butterfly-oft">code</a>
+              <p></p>
+              BOFT (Orthogonal Butterfly) is a general finetuning technique that adapts foundation models to different tasks such as Vision, NLP, Math QA, and Controllable Generation.
+              <p></p>
+            </td>
+          </tr>
+  
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     
         <tr onmouseout="nicer_stop()" onmouseover="nicer_start()">  
           <td width="25%">
