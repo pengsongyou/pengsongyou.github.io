@@ -214,6 +214,7 @@
         <td>
           <heading>News</heading>
             <ul>
+              <li><strong>02/2024</strong> Invited to give a talk on <a href="files/talk_hku.pdf">2D Magic in a 3D World</a> at the University of Hong Kong (<a href="files/talk_hku.pdf">Slides</a>). </li>
               <li><strong>11/2023</strong> <strong>I successfully defended my PhD</strong>! [<a href="files/Songyou_PhD_Thesis.pdf">Thesis</a>][<a href="files/songyou_phd_defense.pdf">Defense Slides</a>]
               <li><strong>10/2023</strong> Our papers <img src="media/logo_nicer.png" width="20"><a href="https://nicer-slam.github.io"> <strong>NICER-SLAM</strong></a> and <a href="https://l1346792580123.github.io/nccsfs/"><strong>FastHuman</strong></a> are accepted to 3DV 2024.
               <li><strong>07/2023</strong> I served as an Area Chair at <a href="https://3dvconf.github.io/2024/area-chairs/">3DV 2024</a>.
@@ -1258,10 +1259,37 @@
     <!-- <p></p> -->
     <br><br><br>
 
+    <tr onmouseout="hku_stop()" onmouseover="hku_start()">  
+      <td width="25%">
+        <div class="one">
+        <div class="two" id = 'hku_shape'>
+        <img src='media/talk_hku_teaser.jpg' width="180" height="100"></div>
+        <img src='media/talk_hku_teaser.jpg' width="180" height="100"></div>
+        </div>
+        <script type="text/javascript">
+        function hku_start() { 
+        document.getElementById('hku_shape').style.opacity = "1";
+        }
+        function hku_stop() { 
+        document.getElementById('hku_shape').style.opacity = "0"; 
+        }
+        hku_stop()
+        </script>
+      </td>
+      <td valign="top" width="75%">
+          <a href="files/talk_hku.pdf">
+            <papertitle>2D Magic in a 3D World</papertitle></a>
+      <br>
+          <em><strong>The University of Hong Kong</strong></em>, 2024
+      <br>
+        <a href="files/talk_hku.pdf">slides</a>
+      </td>
+    </tr>
+
     <tr onmouseout="sgp_stop()" onmouseover="sgp_start()">  
       <td width="25%">
         <div class="one">
-        <div class="two" id = 'stanford_shape'>
+        <div class="two" id = 'sgp_shape'>
         <img src='media/talk_sgp_teaser.jpg' width="180" height="100"></div>
         <img src='media/talk_sgp_teaser.jpg' width="180" height="100"></div>
         </div>
@@ -1288,7 +1316,7 @@
     <tr onmouseout="microsoft_stop()" onmouseover="microsoft_start()">  
       <td width="25%">
         <div class="one">
-        <div class="two" id = 'stanford_shape'>
+        <div class="two" id = 'microsoft_shape'>
         <img src='media/talk_microsoft_teaser.jpg' width="180" height="100"></div>
         <img src='media/talk_microsoft_teaser.jpg' width="180" height="100"></div>
         </div>
