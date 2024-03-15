@@ -260,7 +260,53 @@
       </tr>
       </table>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+      
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+    
+        <tr onmouseout="renovate_stop()" onmouseover="renovate_start()">  
+          <td width="25%">
+            <div class="one">
+              <div class="two" id = 'renovate_shape'>
+                <img src='media/renovate_2.jpeg' width="160" height="120"></div>
+                <img src='media/renovate_1.jpeg' width="160" height="120"></div>
+                </div>
+            <script type="text/javascript">
+            function renovate_start() { 
+            document.getElementById('renovate_shape').style.opacity = "1";
+            }
+            function renovate_stop() { 
+            document.getElementById('renovate_shape').style.opacity = "0"; 
+            }
+            renovate_stop()
+            </script>
+            </script>
+          </td>
+          <td valign="top" width="75%">
+              <a href="https://arxiv.org/abs/2403.09593">
+                <papertitle>
+                  Renovating Names in Open-Vocabulary Segmentation Benchmarks
+                </papertitle>
+              </a>
+          <br>
+              <a href="https://zzh2000.github.io">Haiwen Huang</a>,
+              <strong>Songyou Peng</strong>,
+              <a href="http://people.inf.ethz.ch/vlarsson/">Dan Zhang</a>,
+              <a href="https://www.cvlibs.net/">Andreas Geiger</a>
+          <br>
+              <em>arXiv</em>, 2024
+            <br>
+            <a href="https://arxiv.org/abs/2403.09593">paper</a>
+            <!-- <a href="https://nicer-slam.github.io">project page</a> | -->
+            <!-- <a href="https://youtu.be/H4cOCa3oUno?si=Vp60sexxbZIjwTMH">video</a> | -->
+            <!-- <a href="https://github.com/cvg/nicer-slam">code</a> -->
+            <p></p>
+            Wanna enhance your segmentation model or benchmark? Renovate names now!
+            <p></p>
+          </td>
+        </tr>
+
+
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     
           <tr onmouseout="boft_stop()" onmouseover="boft_start()">  
             <td width="25%">
