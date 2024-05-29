@@ -217,7 +217,7 @@
           <heading>News</heading>
             <ul>
               <li><strong>05/2024</strong> <b><span style="color:#c20000;">Career Update</span></b>: I start working as a research scientist at <a href="https://deepmind.google/"><strong>Google DeepMind</strong></a>!</li>
-              <li><strong>03/2024</strong> Two papers are accepted to <strong>CVPR 2024</strong>! Congrats on the successful master theses of my amazing students at ETH Zurich, <a href="https://scholar.google.com/citations?user=A6d9VTAAAAAJ">Lei Li</a> and <a href="https://github.com/rwn17">Weining Ren</a>! Stay tuned for more details.</strong></li>
+              <li><strong>03/2024</strong> Our papers <a href="https://nerf-on-the-go.github.io/"><strong>NeRF <em>On-the-go</em></strong></a> and <a href="https://neural-edge-map.github.io/"><strong>3D Neural Edge Reconstruction</strong></a> are accepted to <strong>CVPR 2024</strong>! Congrats on the successful master theses of my amazing students at ETH Zurich, <a href="https://scholar.google.com/citations?user=A6d9VTAAAAAJ">Lei Li</a> and <a href="https://github.com/rwn17">Weining Ren</a>!</li>
               <li><strong>03/2024</strong> <a href="https://nicer-slam.github.io/"><strong>NICER-SLAM</strong></a> received the <img src="media/logo_award.png" width="20"><strong><span style="color:#c20000;">Best Paper Honorable Mention Award</span></strong> at <strong>3DV 2024</strong>! Congrats to all co-authors, especially <a href="https://zzh2000.github.io/">Zihan</a>, who started this project during his bachelor and did such a wonderful job!!</li>
               <li><strong>03/2024</strong> Invited to give a talk on <a href="files/talk_hku.pdf">2D Magic in a 3D World</a> at Imperial College London and the University of Hong Kong. </li>
               <li><strong>11/2023</strong> <strong>I successfully defended my PhD</strong>! [<a href="files/Songyou_PhD_Thesis.pdf">Thesis</a>][<a href="files/songyou_phd_defense.pdf">Defense Slides</a>]
@@ -264,6 +264,107 @@
         </td>
       </tr>
       </table>
+
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+    
+        <tr onmouseout="otg_stop()" onmouseover="otg_start()">  
+          <td width="25%">
+            <div class="one">
+            <div class="two" id = 'otg_shape'>
+            <video  width="160" height="120" muted autoplay loop>
+                <source src="media/teaser_otg_1.5x.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video></div>
+            <img src='media/teaser_otg3.jpg' width="160" height="120"></div>
+            <script type="text/javascript">
+            function otg_start() { 
+            document.getElementById('otg_shape').style.opacity = "1";
+            }
+            function otg_stop() { 
+            document.getElementById('otg_shape').style.opacity = "0"; 
+            }
+            otg_stop()
+            </script>
+            </script>
+          </td>
+          <td valign="top" width="75%">
+              <a href="https://nerf-on-the-go.github.io/">
+                <papertitle>
+                  <img src="media/logo_otg.png" width="20"> NeRF <em>On-the-go</em>: Exploiting Uncertainty for Distractor-free NeRFs in the Wild
+                </papertitle>
+              </a>
+          <br>
+              <a href="https://github.com/rwn17">Weining Ren</a>*,
+              <a href="https://zzh2000.github.io">Zihan Zhu</a>*,
+              <a href="https://inf.ethz.ch/people/people-atoz/person-detail.MjY0ODc2.TGlzdC8zMDQsLTIxNDE4MTU0NjA=.html">Boyang Sun</a>,
+              <a href="https://inf.ethz.ch/people/people-atoz/person-detail.Mjc4NTY0.TGlzdC8zMDQsLTIxNDE4MTU0NjA=.html">Jiaqi Chen</a>,
+              <a href="https://inf.ethz.ch/personal/marc.pollefeys/">Marc Pollefeys</a>,
+              <strong>Songyou Peng</strong>
+          <br>
+              <em>Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>)</em>, 2024
+          <br>
+            (* equal contribution)
+            <br>
+            <a href="https://drive.google.com/file/d/1wESyLihAh81Y-Cz3MfMQdzogd-V_DrXv/view">paper</a> |
+            <a href="https://nerf-on-the-go.github.io/">project page</a> |
+            <a href="https://youtu.be/mUQ_LOyonB0">video</a> |
+            <a href="https://github.com/cvg/nerf-on-the-go">code</a>
+            <p></p>
+            We enable robust novel view synthesis from casually captured in-the-wild images. <br>
+            <span style="color:#c20000;">Master thesis project.</span>
+            <p></p>
+          </td>
+        </tr>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+    
+          <tr onmouseout="edge_stop()" onmouseover="edge_start()">  
+            <td width="25%">
+              <div class="one">
+              <div class="two" id = 'edge_shape'>
+              <video  width="160" height="106" muted autoplay loop>
+                  <source src="media/emap_teaser.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video></div>
+              <img src='media/emap_teaser.jpg' width="160" height="106"></div>
+              <script type="text/javascript">
+              function edge_start() { 
+              document.getElementById('edge_shape').style.opacity = "1";
+              }
+              function edge_stop() { 
+              document.getElementById('edge_shape').style.opacity = "0"; 
+              }
+              edge_stop()
+              </script>
+              </script>
+            </td>
+            <td valign="top" width="75%">
+                <a href="https://neural-edge-map.github.io/">
+                  <papertitle>
+                    3D Neural Edge Reconstruction
+                  </papertitle>
+                </a>
+            <br>
+                <a href="https://github.com/rayeeli">Lei Li</a>,
+                <strong>Songyou Peng</strong>,
+                <a href="https://niujinshuchong.github.io/">Zehao Yu</a>,
+                <a href="http://b1ueber2y.me/">Shaohui Liu</a>,
+                <a href="https://rpautrat.github.io/">Rémi Pautrat</a>,
+                <a href="https://ieeexplore.ieee.org/author/37085401381">Xiaochuan Yin</a>,
+                <a href="https://inf.ethz.ch/personal/marc.pollefeys/">Marc Pollefeys</a>
+            <br>
+                <em>Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>)</em>, 2024
+            <br>
+              <a href="https://drive.google.com/file/d/1ELB1orbntsyebcu_9enLbGMoEk42eWn1/view">paper</a> |
+              <a href="https://neural-edge-map.github.io/">project page</a> |
+              <a href="https://youtu.be/ONXfu2b4Nug">video</a> |
+              <a href="https://github.com/cvg/EMAP">code</a>
+              <p></p>
+              <em>The straight line belongs to men, the curved one to God.</em>-- Antonio Gaudi<br>
+              <span style="color:#c20000;">Master thesis project.</span>
+              <p></p>
+            </td>
+          </tr>
 
       
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
