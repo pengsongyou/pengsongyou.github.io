@@ -216,6 +216,7 @@
         <td>
           <heading>News</heading>
             <ul>
+              <li><strong>07/2024</strong> Our paper <a href="https://segment3d.github.io/"><strong>Segment3D</strong></a> is accepted to ECCV 2024! Also, I will be co-organizing two workshops: <a href="https://focus-workshop.github.io/1st">Foundation Models Creators Meet Users (FOCUS)</a> and <a href="https://focus-workshop.github.io/1st">Open-Vocabulary 3D Scene Understanding (OpenSUN3D)</a>.</li>
               <li><strong>05/2024</strong> <b><span style="color:#c20000;">Career Update</span></b>: I start working as a research scientist at <a href="https://deepmind.google/"><strong>Google DeepMind</strong></a>!</li>
               <li><strong>03/2024</strong> Our papers <a href="https://rwn17.github.io/nerf-on-the-go/"><strong>NeRF <em>On-the-go</em></strong></a> and <a href="https://neural-edge-map.github.io/"><strong>3D Neural Edge Reconstruction</strong></a> are accepted to <strong>CVPR 2024</strong>! Congrats on the successful master theses of my amazing students at ETH Zurich, <a href="https://scholar.google.com/citations?user=A6d9VTAAAAAJ">Lei Li</a> and <a href="https://github.com/rwn17">Weining Ren</a>!</li>
               <li><strong>03/2024</strong> <a href="https://nicer-slam.github.io/"><strong>NICER-SLAM</strong></a> received the <img src="media/logo_award.png" width="20"><strong><span style="color:#c20000;">Best Paper Honorable Mention Award</span></strong> at <strong>3DV 2024</strong>! Congrats to all co-authors, especially <a href="https://zzh2000.github.io/">Zihan</a>, who started this project during his bachelor and did such a wonderful job!!</li>
@@ -264,6 +265,53 @@
         </td>
       </tr>
       </table>
+
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+    
+        <tr onmouseout="segment3d_stop()" onmouseover="segment3d_start()">  
+          <td width="25%">
+            <div class="one">
+            <div class="two" id = 'segment3d_shape'>
+              <img src='media/segment3d_output.jpg' width="160" height="124"></div>
+            <img src='media/segment3d_input.jpg' width="160" height="124"></div>
+            <script type="text/javascript">
+            function segment3d_start() { 
+            document.getElementById('segment3d_shape').style.opacity = "1";
+            }
+            function segment3d_stop() { 
+            document.getElementById('segment3d_shape').style.opacity = "0"; 
+            }
+            segment3d_stop()
+            </script>
+            </script>
+          </td>
+          <td valign="top" width="75%">
+              <a href="https://segment3d.github.io">
+                <papertitle>
+                  Segment3D: Learning Fine-Grained Class-Agnostic 3D Segmentation without Manual Labels
+                </papertitle>
+              </a>
+          <br>
+              <a href="https://scholar.google.com/citations?user=ieN4b1QAAAAJ&hl=zh-CN&oi=sra">Rui Huang</a>,
+              <strong>Songyou Peng</strong>,
+              <a href="https://aycatakmaz.github.io/">Ayça Takmaz</a>,
+              <a href="https://federicotombari.github.io/"> Federico Tombari</a>,
+              <a href="https://inf.ethz.ch/personal/marc.pollefeys/">Marc Pollefeys</a>,
+              <a href="https://scholar.google.com/citations?user=rw6vWdcAAAAJ&hl=zh-CN">Shiji Song</a>,
+              <a href="https://www.gaohuang.net/">Gao Huang</a>,
+              <a href="https://francisengelmann.github.io/">Francis Engelmann</a>
+          <br>
+              <em>European Conference on Computer Vision (<strong>ECCV</strong>)</em>, 2024
+            <br>
+            <a href="https://arxiv.org/abs/2312.17232">paper</a> |
+            <a href="https://segment3d.github.io">project page</a> |
+            <!-- <a href="https://youtu.be/H4cOCa3oUno?si=Vp60sexxbZIjwTMH">video</a> | -->
+            <a href="https://mix3d-demo.nekrasov.dev/segment3d/">demo</a>
+            <p></p>
+            A self-supervised segmentation approach that outperforms fully-supervised methods.
+            <p></p>
+          </td>
+        </tr>
 
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     
@@ -602,53 +650,6 @@
             <a href="files/songyou_phd_defense.pdf">slides</a>
           </td>
         </tr>
-
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
-    
-          <tr onmouseout="segment3d_stop()" onmouseover="segment3d_start()">  
-            <td width="25%">
-              <div class="one">
-              <div class="two" id = 'segment3d_shape'>
-                <img src='media/segment3d_output.jpg' width="160" height="124"></div>
-              <img src='media/segment3d_input.jpg' width="160" height="124"></div>
-              <script type="text/javascript">
-              function segment3d_start() { 
-              document.getElementById('segment3d_shape').style.opacity = "1";
-              }
-              function segment3d_stop() { 
-              document.getElementById('segment3d_shape').style.opacity = "0"; 
-              }
-              segment3d_stop()
-              </script>
-              </script>
-            </td>
-            <td valign="top" width="75%">
-                <a href="https://segment3d.github.io">
-                  <papertitle>
-                    Segment3D: Learning Fine-Grained Class-Agnostic 3D Segmentation without Manual Labels
-                  </papertitle>
-                </a>
-            <br>
-                <a href="https://scholar.google.com/citations?user=ieN4b1QAAAAJ&hl=zh-CN&oi=sra">Rui Huang</a>,
-                <strong>Songyou Peng</strong>,
-                <a href="https://aycatakmaz.github.io/">Ayça Takmaz</a>,
-                <a href="https://federicotombari.github.io/"> Federico Tombari</a>,
-                <a href="https://inf.ethz.ch/personal/marc.pollefeys/">Marc Pollefeys</a>,
-                <a href="https://scholar.google.com/citations?user=rw6vWdcAAAAJ&hl=zh-CN">Shiji Song</a>,
-                <a href="https://www.gaohuang.net/">Gao Huang</a>,
-                <a href="https://francisengelmann.github.io/">Francis Engelmann</a>
-            <br>
-                <em>arXiv</em>, 2023
-              <br>
-              <a href="https://arxiv.org/abs/2312.17232">paper</a> |
-              <a href="https://segment3d.github.io">project page</a> |
-              <!-- <a href="https://youtu.be/H4cOCa3oUno?si=Vp60sexxbZIjwTMH">video</a> | -->
-              <a href="https://mix3d-demo.nekrasov.dev/segment3d/">demo</a>
-              <p></p>
-              A self-supervised segmentation approach that outperforms fully-supervised methods.
-              <p></p>
-            </td>
-          </tr>
         
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     
@@ -1986,7 +1987,7 @@
               <ul>
                   <li> <strong>Publicity Chair</strong>: 3DV'25<br>
                   <li> <strong>Area Chair</strong>: 3DV'24<br>
-                  <li> <strong>Workshop Organizer</strong>: <a href="https://opensun3d.github.io/">OpenSUN3D</a> at ICCV'23 <br>
+                  <li> <strong>Workshop Organizer</strong>: <a href="https://opensun3d.github.io/">OpenSUN3D</a> at ICCV'23 (<a href="https://opensun3d.github.io/index_iccv23.html">1st</a>), CVPR'24 (2nd), and ECCV'24 (3rd), <a href="https://opensun3d.github.io/">FOCUS</a> at ECCV'24<br>
                   <li> <strong>Conference Reviewer</strong>: CVPR, ICCV, ECCV, ICLR, NeurIPS, SIGGRAPH, SIGGRAPH Asia<br>
                   <li> <strong>Journal Reviewer</strong>: TPAMI, CVIU
               </ul>
