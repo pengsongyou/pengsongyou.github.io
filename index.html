@@ -216,16 +216,17 @@
         <td>
           <heading>News</heading>
             <ul>
+              <li><strong>05/2024</strong> Invited to give talks on <a href="files/talk_stanford_2025.pdf">A "Splatacular" Year of 3D Reconstruction</a> at Stanford University and KAIST (as a guest lecture). </li>
               <li><strong>02/2025</strong> 4 papers (<a href="https://haofeixu.github.io/depthsplat/"><strong>DepthSplat</strong></a>, <a href="https://promptda.github.io/"><strong>Prompt Depth Anything</strong></a>, <a href=https://zju3dv.github.io/free360><strong>Free360</strong></a>, <a href=https://wildgs-slam.github.io><strong>WildGS-SLAM</strong></a>) are accepted to <strong>CVPR 2025</strong>!</li>
               <li><strong>02/2025</strong> <img src="media/logo_nopo.jpg" width="20"><a href="https://noposplat.github.io/"><strong>NoPoSplat</strong></a> is accepted to <strong>ICLR 2025</strong> as an <strong><span style="color:#c20000;">Oral </span>(top 1.8%)</strong>!</li>
               <li><strong>12/2024</strong> I will serve as an Area Chair at <strong>ICCV 2025</strong> and <strong>ICML 2025</strong>.</li>
               <li><strong>11/2024</strong> I give lectures for an 11-week course <strong>GAMES003: 图形视觉科研基本素养 (How To Do Research in CV/CG)</strong>. <a href="https://pengsida.net/games003/">All lecture recordings and slides</a> are online (in Chinese).</li>
               <li><strong>10/2024</strong> My PhD thesis received the <img src="media/logo_award.png" width="20"><a href="https://www.ecva.net/index.php#awards"><strong>ECVA PhD Award</strong></a></strong></a>!</li>
+              <a href="javascript:toggleblock(&#39;old_news&#39;)">---- show more ----</a>
+              <div id="old_news" style="display: none;">
               <li><strong>09/2024</strong> <a href="https://wild-gaussians.github.io/"><strong>WildGaussians</strong></a> and <a href="https://andrehuang.github.io/renovate/"><strong>RENOVATE</strong></a> are accepted to <strong>NeurIPS 2024</strong>!</li>
               <li><strong>07/2024</strong> <a href="https://segment3d.github.io/"><strong>Segment3D</strong></a> is accepted to ECCV 2024! Also, I will be co-organizing two workshops: <a href="https://focus-workshop.github.io/">Foundation Models Creators Meet Users (FOCUS)</a> and <a href="https://opensun3d.github.io/">Open-Vocabulary 3D Scene Understanding (OpenSUN3D)</a>.</li>
               <li><strong>05/2024</strong> <b><span style="color:#c20000;">Career Update</span></b>: I start working as a research scientist at <a href="https://deepmind.google/"><strong>Google DeepMind</strong></a>!</li>
-              <a href="javascript:toggleblock(&#39;old_news&#39;)">---- show more ----</a>
-              <div id="old_news" style="display: none;">
               
               <li><strong>03/2024</strong> Our papers <a href="https://rwn17.github.io/nerf-on-the-go/"><strong>NeRF <em>On-the-go</em></strong></a> and <a href="https://neural-edge-map.github.io/"><strong>3D Neural Edge Reconstruction</strong></a> are accepted to <strong>CVPR 2024</strong>! Congrats on the successful master theses of my amazing students at ETH Zurich, <a href="https://scholar.google.com/citations?user=A6d9VTAAAAAJ">Lei Li</a> and <a href="https://github.com/rwn17">Weining Ren</a>!</li>
               <li><strong>03/2024</strong> <a href="https://nicer-slam.github.io/"><strong>NICER-SLAM</strong></a> received the <img src="media/logo_award.png" width="20"><strong><span style="color:#c20000;">Best Paper Honorable Mention Award</span></strong> at <strong>3DV 2024</strong>! 
@@ -1654,10 +1655,10 @@
         <td>
           I am fortunate to (co-)mentor some talented and highly motivated students. I have learnt from and gotten inspired by them:
           <ul>
-            <li> <a href="https://janackermann.info/"><strong>Jan Ackermann</strong></a> (Ongoing): MSc student at ETH Zurich<br>
+            <li> <a href="https://janackermann.info/"><strong>Jan Ackermann</strong></a> (2024): MSc student at ETH Zurich<br>
               <ul>
-                <li> Semester thesis: Continual Learning of Gaussian Splatting with Local Optimization (CVPR'25 submission)
-                <li> &#8594; Master thesis at Stanford University, advised by <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>
+                <li> Semester thesis: Continual Learning of Gaussian Splatting with Local Optimization (ICCV'25 submission)
+                <li> &#8594; Master thesis and PhD student at Stanford University, advised by <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>
               </ul>
               <br>
               <li> <a href="https://www.linkedin.com/in/goncayilmaz/"><strong>Gonca Yilmaz</strong></a> (2024): MSc student at University of Zurich<br>
@@ -1721,6 +1722,34 @@
     <heading>Invited Talks</heading>
     <!-- <p></p> -->
     <br><br><br>
+
+    <tr onmouseout="splatacular_stop()" onmouseover="splatacular_start()">  
+      <td width="25%">
+        <div class="one">
+        <div class="two" id = 'hku_shape'>
+        <img src='media/talk_stanford_2025.jpg' width="180" height="100"></div>
+        <img src='media/talk_stanford_2025.jpg' width="180" height="100"></div>
+        </div>
+        <script type="text/javascript">
+        function splatacular_start() { 
+        document.getElementById('splatacular_shape').style.opacity = "1";
+        }
+        function splatacular_stop() { 
+        document.getElementById('splatacular_shape').style.opacity = "0"; 
+        }
+        splatacular_stop()
+        </script>
+      </td>
+      <td valign="top" width="75%">
+          <a href="files/talk_stanford_2025.pdf">
+            <papertitle>A "Splatacular" Year of 3D Reconstruction</papertitle></a>
+      <br>
+          <em><strong>Stanford University</strong></em>, hosted by <a href="https://ir0.github.io/">Iro Armeni</a>, 2025 <br>
+          <em><strong>KAIST</strong></em>, hosted by <a href="https://mhsung.github.io/">Minhyuk Sung</a>, 2025 (<strong><span style="color:#c20000;">Guest Lecture</span></strong>)
+      <br>
+      <a href="https://youtu.be/pcTNtDSS7p4?feature=shared">recording</a> | <a href="files/talk_hku.pdf">slides</a>
+      </td>
+    </tr>
 
     <tr onmouseout="hku_stop()" onmouseover="hku_start()">  
       <td width="25%">
