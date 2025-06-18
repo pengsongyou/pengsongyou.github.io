@@ -277,6 +277,40 @@
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     
 
+        <tr onmouseout="gemini_stop()" onmouseover="gemini_start()">  
+          <td width="25%" style="padding-bottom: 0px;">
+            <div class="one">
+            <div class="two" id = 'gemini_shape'>
+            <img src='media/logo_gemini.png' width="160" height="59"></div>
+            <img src='media/logo_gemini.png' width="160" height="59"></div>
+            </div>
+            <script type="text/javascript">
+            function gemini_start() { 
+            document.getElementById('gemini_shape').style.opacity = "1";
+            }
+            function gemini_stop() { 
+            document.getElementById('gemini_shape').style.opacity = "0"; 
+            }
+            gemini_stop()
+            </script>
+          </td>
+            </script>
+          </td>
+          <td valign="top" width="75%">
+              <a href="https://gemini.google.com">
+                <papertitle>
+                  Gemini 2.5
+                </papertitle>
+              </a>
+          <br>
+              <strong>Google DeepMind</strong>
+            <br>
+            <br>
+            <a href="https://arxiv.org/abs/2410.13862">tech report</a> | 
+            <a href="https://gemini.google.com">website</a>
+          </td>
+        </tr>
+
         <tr onmouseout="depthsplat_stop()" onmouseover="depthsplat_start()">  
           <td width="25%">
             <div class="one">
@@ -1696,12 +1730,23 @@
     
 
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-    <heading>Mentored Students</heading>
+    <heading>Mentored Students and Interns</heading>
       <tr>
         <td>
-          I am fortunate to (co-)mentor some talented and highly motivated students. I have learnt from and gotten inspired by them:
+          I am fortunate to (co-)mentor some talented and highly motivated students and interns. I have learnt from and gotten inspired by them:
           <ul>
-            <li> <a href="https://janackermann.info/"><strong>Jan Ackermann</strong></a> (2024): MSc student at ETH Zurich<br>
+              <li> <a href="https://boyangdeng.com/"><strong>Boyang Deng</strong></a> (2024): PhD student at Stanford University<br>
+              <ul>
+                <li> Internship project at Google DeepMind: <a href="https://boyangdeng.com/visual-chronicles/">Visual Chronicles</a> (ICCV'25 submission)
+              </ul>
+              <br>
+              <li> <a href="https://boyangdeng.com/"><strong>Anh Thai</strong></a> (2024): PhD student at Georgia Tech<br>
+              <ul>
+                <li> Internship project at Google DeepMind: <a href="https://arxiv.org/abs/2503.06271">SplatTalk</a> (ICCV'25 submission)
+                <li> &#8594; Senior AI Multimodal Researcher at <a href="https://www.dolby.com/">Dolby Laboratories</a>
+              </ul>
+              <br>
+              <li> <a href="https://janackermann.info/"><strong>Jan Ackermann</strong></a> (2024): MSc student at ETH Zurich<br>
               <ul>
                 <li> Semester thesis: Continual Learning of Gaussian Splatting with Local Optimization (ICCV'25 submission)
                 <li> &#8594; Master thesis and PhD student at Stanford University, advised by <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>
@@ -1716,13 +1761,13 @@
               <br>
               <li> <a href="https://www.google.com/search?q=weining+ren"><strong>Weining Ren</strong></a> (2023): MSc student at ETH Zurich<br>
                 <ul>
-                  <li> Master thesis: <a href="https://rwn17.github.io/nerf-on-the-go/"><strong>NeRF On-the-go</strong></a> (CVPR'24)
+                  <li> Master thesis: <a href="https://rwn17.github.io/nerf-on-the-go/">NeRF On-the-go</a> (CVPR'24)
                   <li> &#8594; PhD student at The University of Hong Kong (HKU), advised by <a href="https://www.kaihan.org/">Kai Han</a>
                 </ul>
               <br>
               <li> <a href="https://scholar.google.com/citations?user=A6d9VTAAAAAJ&hl=en"><strong>Lei Li</strong></a> (2023): MSc student at ETH Zurich<br>
                 <ul>
-                  <li> Master thesis: <a href="https://pengsongyou.github.io"><strong>3D Neural Edge Reconstruction</strong></a> (CVPR'24)
+                  <li> Master thesis: <a href="https://pengsongyou.github.io">3D Neural Edge Reconstruction</a> (CVPR'24)
                   <li> &#8594; Computer vision engineer at <a href="https://www.bytedance.com/en/">ByteDance</a>
                 </ul>
               <br>
@@ -1730,6 +1775,11 @@
                 <ul>
                   <li> Master thesis: Interactive Preprocessing via Multi-Modal Prompting for NeRFs
                   <li> &#8594; PhD student at <a href="https://www.mercedes-benz.de/">Mercedes-Benz AG</a>
+                </ul>
+              <br>
+              <li> <a href="https://junrul.github.io/"><strong>Junru Lin</strong></a> (2023): BSc student at Univeristy of Toronto<br>
+                <ul>
+                  <li> Summer project: <a href="https://arxiv.org/abs/2312.13332">Ternary-type Opacity and Hybrid Odometry for RGB-only NeRF-SLAM</a> (IROS'24)
                 </ul>
               <br>
               <li> <a href="https://primecai.github.io/"><strong>Shengqu Cai</strong></a> (2022): MSc student at ETH Zurich<br>
@@ -1740,10 +1790,10 @@
               <br>
               <li> <a href="https://zzh2000.github.io/"><strong>Zihan Zhu</strong></a> (2021): BSc student at Zhejiang University<br>
                 <ul>
-                  <li> Bachelor internship project: <a href="https://primecai.github.io/diffdreamer"><strong>NICE-SLAM</strong></a> (CVPR'22)
-                    <li> Semester project: <a href="https://primecai.github.io/diffdreamer"><strong>NICER-SLAM</strong></a> (3DV'24, <strong><span style="color:#c20000;">Best Paper Honorable Mention</span></strong>)
-                      <li> Semester project: Monocular Gaussian Splatting SLAM in Dynamic Environments (CVPR'25 submission)
-                    <li> Master thesis (Ongoing): Leverage geometric constraints for better depth estimation
+                  <li> Bachelor internship project: <a href="https://pengsongyou.github.io/nice-slam">NICE-SLAM</a> (CVPR'22)
+                    <li> Semester project: <a href="https://nicer-slam.github.io/">NICER-SLAM</a> (3DV'24, <strong><span style="color:#c20000;">Best Paper Honorable Mention</span></strong>)
+                    <li> Semester project: <a href="https://wildgs-slam.github.io/">WildGS-SLAM</a> (CVPR'25)
+                    <li> Master thesis: Leverage geometric constraints for better depth estimation
                   <li> &#8594; Direct doctorate student at ETH Zurich, advised by <a href="https://people.inf.ethz.ch/pomarc/">Marc Pollefeys</a>
                 </ul>
               <br>
