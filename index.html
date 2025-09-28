@@ -76,6 +76,25 @@
     span.highlight {
         background-color: #ffffd0;
     }
+    .publication-item {
+        display: none; /* Hide all by default */
+    }
+    .selected-publication {
+        display: table-row; /* Show selected ones */
+    }
+    .publication-toggle-button {
+        cursor: pointer;
+        color: #1772d0;
+        text-decoration: underline;
+    }
+    .publication-toggle-button:hover {
+        color: #f09228; /* Use the same hover color */
+        text-decoration: underline;
+    }
+    .publication-toggle-button.active {
+        font-weight: 500; /* Make the active button bold */
+        text-decoration: none;
+    } 
   </style>
   <link rel="icon" type="image/png" href="media/preview.jpg">
   <title>Songyou Peng - Homepage</title>
@@ -216,7 +235,7 @@
         <td>
           <heading>News</heading>
             <ul>
-              <li><strong>09/2024</strong> <a href="https://lodge-gs.github.io/"><strong>LODGE</strong></a> is accepted to <strong>NeurIPS 2025</strong> as a <strong><span style="color:#c20000;">spotlight</span></strong>!</li>
+              <li><strong>09/2025</strong> <a href="https://lodge-gs.github.io/"><strong>LODGE</strong></a> is accepted to <strong>NeurIPS 2025</strong> as a <strong><span style="color:#c20000;">spotlight</span></strong>!</li>
               <li><strong>08/2025</strong> I will serve as an Area Chair at <strong>ICLR 2026</strong> and <strong>CVPR 2026</strong>.</li>
               <li><strong>07/2025</strong> Three papers (<a href="https://boyangdeng.com/visual-chronicles/"><strong>Visual Chronicles</strong></a>, <a href="https://cl-splats.github.io/"><strong>CL-Splats</strong></a>, and <a href="https://wildgs-slam.github.io"><strong>SplatTalk</strong></a>) are accepted to <strong>ICCV 2025</strong>!</li>
               <li><strong>05/2025</strong> Invited to give talks on <a href="files/talk_stanford_2025.pdf"><strong>A "Splatacular" Year of 3D Reconstruction</strong></a> at Stanford University and KAIST (as a guest lecture). </li>
@@ -272,7 +291,10 @@
       </tr>
       <tr>
         <td width="100%" valign="middle">
-          <heading>Research</heading>
+          <heading>Research
+                (<span class="publication-toggle-button" id="show-selected">Selected</span> |
+                <span class="publication-toggle-button" id="show-all">Full List</span>)
+          </heading>
         </td>
       </tr>
       </table>
@@ -280,7 +302,7 @@
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     
 
-        <tr onmouseout="gemini_stop()" onmouseover="gemini_start()">  
+        <tr onmouseout="gemini_stop()" onmouseover="gemini_start()" class="publication-item selected-publication">  
           <td width="25%" style="padding-bottom: 0px;">
             <div class="one">
             <div class="two" id = 'gemini_shape'>
@@ -314,7 +336,7 @@
           </td>
         </tr>
 
-        <tr onmouseout="lodge_stop()" onmouseover="lodge_start()">  
+        <tr onmouseout="lodge_stop()" onmouseover="lodge_start()" class="publication-item">  
           <td width="25%">
             <div class="one">
             <div class="two" id = 'lodge_shape'>
@@ -360,7 +382,7 @@
           </td>
         </tr>
 
-        <tr onmouseout="chronicles_stop()" onmouseover="chronicles_start()">  
+        <tr onmouseout="chronicles_stop()" onmouseover="chronicles_start()" class="publication-item selected-publication">  
           <td width="25%">
               <div class="one">
                 <div class="two" id = 'chronicles_shape'>
@@ -403,7 +425,7 @@
           </td>
         </tr>
 
-        <tr onmouseout="clsplats_stop()" onmouseover="clsplats_start()">  
+        <tr onmouseout="clsplats_stop()" onmouseover="clsplats_start()" class="publication-item selected-publication">  
           <td width="25%">
             <div class="one">
             <div class="two" id = 'clsplats_shape'>
@@ -450,7 +472,7 @@
           </td>
         </tr>
         
-        <tr onmouseout="splattalk_stop()" onmouseover="splattalk_start()">  
+        <tr onmouseout="splattalk_stop()" onmouseover="splattalk_start()" class="publication-item">  
           <td width="25%">
             <div class="one">
             <div class="two" id = 'splattalk_shape'>
@@ -491,7 +513,7 @@
           </td>
         </tr>
 
-        <tr onmouseout="depthsplat_stop()" onmouseover="depthsplat_start()">  
+        <tr onmouseout="depthsplat_stop()" onmouseover="depthsplat_start()" class="publication-item">  
           <td width="25%">
             <div class="one">
             <div class="two" id = 'depthsplat_shape'>
@@ -538,7 +560,7 @@
           </td>
         </tr>
 
-        <tr onmouseout="pda_stop()" onmouseover="pda_start()">  
+        <tr onmouseout="pda_stop()" onmouseover="pda_start()" class="publication-item">  
           <td width="25%">
             <div class="one">
             <div class="two" id = 'pda_shape'>
@@ -588,7 +610,7 @@
           </td>
         </tr>
 
-        <tr onmouseout="free360_stop()" onmouseover="free360_start()">  
+        <tr onmouseout="free360_stop()" onmouseover="free360_start()" class="publication-item">  
           <td width="25%">
             <div class="one">
             <div class="two" id = 'free360_shape'>
@@ -634,7 +656,7 @@
           </td>
         </tr>
 
-        <tr onmouseout="wildgslam_stop()" onmouseover="wildgslam_start()">  
+        <tr onmouseout="wildgslam_stop()" onmouseover="wildgslam_start()" class="publication-item">  
           <td width="25%">
             <div class="one">
             <div class="two" id = 'wildgslam_shape'>
@@ -681,7 +703,7 @@
         </tr>
 
 
-        <tr onmouseout="nopo_stop()" onmouseover="nopo_start()">  
+        <tr onmouseout="nopo_stop()" onmouseover="nopo_start()" class="publication-item selected-publication">  
           <td width="25%">
             <div class="one">
             <div class="two" id = 'nopo_shape'>
@@ -728,7 +750,7 @@
           </td>
         </tr>
     
-        <tr onmouseout="wildgaussian_stop()" onmouseover="wildgaussian_start()">  
+        <tr onmouseout="wildgaussian_stop()" onmouseover="wildgaussian_start()" class="publication-item">  
           <td width="25%">
             <div class="one">
             <div class="two" id = 'wildgaussian_shape'>
@@ -774,7 +796,7 @@
         </tr>
     
 
-        <tr onmouseout="renovate_stop()" onmouseover="renovate_start()">  
+        <tr onmouseout="renovate_stop()" onmouseover="renovate_start()" class="publication-item">  
             <td width="25%">
               <div class="one">
                 <div class="two" id = 'renovate_shape'>
@@ -816,7 +838,7 @@
             </td>
           </tr>
     
-        <tr onmouseout="segment3d_stop()" onmouseover="segment3d_start()">  
+        <tr onmouseout="segment3d_stop()" onmouseover="segment3d_start()" class="publication-item">  
           <td width="25%">
             <div class="one">
             <div class="two" id = 'segment3d_shape'>
@@ -863,7 +885,7 @@
 
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     
-        <tr onmouseout="otg_stop()" onmouseover="otg_start()">  
+        <tr onmouseout="otg_stop()" onmouseover="otg_start()" class="publication-item selected-publication">  
           <td width="25%">
             <div class="one">
             <div class="two" id = 'otg_shape'>
@@ -914,7 +936,7 @@
 
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     
-          <tr onmouseout="edge_stop()" onmouseover="edge_start()">  
+          <tr onmouseout="edge_stop()" onmouseover="edge_start()" class="publication-item">  
             <td width="25%">
               <div class="one">
               <div class="two" id = 'edge_shape'>
@@ -966,7 +988,7 @@
 
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     
-          <tr onmouseout="boft_stop()" onmouseover="boft_start()">  
+          <tr onmouseout="boft_stop()" onmouseover="boft_start()" class="publication-item">  
             <td width="25%">
               <div class="one">
               <div class="two" id = 'boft_shape'>
@@ -1027,9 +1049,9 @@
           </tr>
   
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
     
-        <tr onmouseout="nicer_stop()" onmouseover="nicer_start()">  
+        <tr onmouseout="nicer_stop()" onmouseover="nicer_start()" class="publication-item selected-publication">  
           <td width="25%">
             <div class="one">
             <div class="two" id = 'nicer_shape'>
@@ -1081,7 +1103,7 @@
 
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     
-        <tr onmouseout="patch_stop()" onmouseover="patch_start()">  
+        <tr onmouseout="patch_stop()" onmouseover="patch_start()" class="publication-item">  
           <td width="25%">
             <div class="one">
             <div class="two" id = 'patch_shape'>
@@ -1125,7 +1147,7 @@
           </td>
         </tr>
 
-        <tr onmouseout="thesis_stop()" onmouseover="thesis_start()">  
+        <tr onmouseout="thesis_stop()" onmouseover="thesis_start()" class="publication-item selected-publication">  
           <td width="25%">
             <div class="one">
             <div class="two" id = 'stanford_shape'>
@@ -1160,7 +1182,7 @@
         
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     
-          <tr onmouseout="dreamer_stop()" onmouseover="dreamer_start()">  
+          <tr onmouseout="dreamer_stop()" onmouseover="dreamer_start()" class="publication-item">  
             <td width="25%">
               <div class="one">
               <div class="two" id = 'dreamer_shape'>
@@ -1211,7 +1233,7 @@
       
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     
-        <tr onmouseout="openscene_stop()" onmouseover="openscene_start()">  
+        <tr onmouseout="openscene_stop()" onmouseover="openscene_start()" class="publication-item selected-publication">  
           <td width="25%">
             <div class="one">
             <div class="two" id = 'openscene_shape'>
@@ -1256,7 +1278,7 @@
           </td>
         </tr>
 
-        <tr onmouseout="sdfstudio_stop()" onmouseover="sdfstudio_start()">  
+        <tr onmouseout="sdfstudio_stop()" onmouseover="sdfstudio_start()" class="publication-item">  
           <td width="25%">
             <div class="one">
             <div class="two" id = 'sdfstudio_shape'>
@@ -1309,7 +1331,7 @@
         </tr>
   
 
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" class="publication-item selected-publication">
     
         <tr onmouseout="mono_stop()" onmouseover="mono_start()">  
           <td width="25%">
@@ -1355,7 +1377,7 @@
           </td>
         </tr>
     
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" class="publication-item selected-publication">
     
         <tr onmouseout="nice_stop()" onmouseover="nice_start()">  
           <td width="25%">
@@ -1408,7 +1430,7 @@
         </tr>
     
     
-    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" class="publication-item selected-publication">
       <tr onmouseout="sap_stop()" onmouseover="sap_start()">  
       <td width="25%">
         <div class="one">
@@ -1459,7 +1481,7 @@
 
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
-    <tr onmouseout="unisurf_stop()" onmouseover="unisurf_start()">  
+    <tr onmouseout="unisurf_stop()" onmouseover="unisurf_start()" class="publication-item selected-publication">  
       <td width="25%">
         <div class="one">
         <div class="two" id = 'unisurf_shape'>
@@ -1500,7 +1522,7 @@
     </tr>
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
-    <tr onmouseout="kilo_stop()" onmouseover="kilo_start()">  
+    <tr onmouseout="kilo_stop()" onmouseover="kilo_start()" class="publication-item selected-publication">  
       <td width="25%">
         <div class="one">
         <div class="two" id = 'kilo_shape'>
@@ -1546,7 +1568,7 @@
 
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
-    <tr onmouseout="dpcon_stop()" onmouseover="dpcon_start()">  
+    <tr onmouseout="dpcon_stop()" onmouseover="dpcon_start()" class="publication-item">  
       <td width="25%">
         <div class="one">
         <div class="two" id = 'dpcon_shape'>
@@ -1588,7 +1610,7 @@
     </tr>
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
-    <tr onmouseout="con_stop()" onmouseover="con_start()">  
+    <tr onmouseout="con_stop()" onmouseover="con_start()" class="publication-item selected-publication">  
       <td width="25%">
         <div class="one">
         <div class="two" id = 'con_shape'>
@@ -1637,7 +1659,7 @@
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
     <!-- <tr onmouseout="wizard_stop()" onmouseover="wizard_start()" bgcolor="#ffffd0"> -->
-    <tr onmouseout="dist_stop()" onmouseover="dist_start()">  
+    <tr onmouseout="dist_stop()" onmouseover="dist_start()" class="publication-item">  
       <td width="25%">
         <div class="one">
         <div class="two" id = 'dist_shape'>
@@ -1684,7 +1706,7 @@
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
     <!-- <tr onmouseout="wizard_stop()" onmouseover="wizard_start()" bgcolor="#ffffd0"> -->
-    <tr onmouseout="wizard_stop()" onmouseover="wizard_start()">	
+    <tr onmouseout="wizard_stop()" onmouseover="wizard_start()" class="publication-item selected-publication">	
       <td width="25%">
         <div class="one">
         <div class="two" id = 'wizard_shape'>
@@ -1725,7 +1747,7 @@
 
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
-    <tr onmouseout="pami_stop()" onmouseover="pami_start()">
+    <tr onmouseout="pami_stop()" onmouseover="pami_start()" class="publication-item selected-publication">
       <td width="25%">
         <div class="one">
         <div class="two" id = 'pami_shape'>
@@ -1766,7 +1788,7 @@
 
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
-    <tr onmouseout="persemon_stop()" onmouseover="persemon_start()">
+    <tr onmouseout="persemon_stop()" onmouseover="persemon_start()" class="publication-item">
       <td width="25%">
         <div class="one">
         <div class="two" id = 'persemon_shape'>
@@ -1803,7 +1825,7 @@
 
 
     
-    <tr onmouseout="personality_stop()" onmouseover="personality_start()">
+    <tr onmouseout="personality_stop()" onmouseover="personality_start()" class="publication-item">
       <td width="25%">
         <div class="one">
         <div class="two" id = 'personality_image'><img src='media/acmmm_demo.gif' width="160" height="110"></div>
@@ -1836,7 +1858,7 @@
       </td>
     </tr>
 
-    <tr onmouseout="iccvw_stop()" onmouseover="iccvw_start()">
+    <tr onmouseout="iccvw_stop()" onmouseover="iccvw_start()" class="publication-item">
       <td width="25%">
         <div class="one">
         <div class="two" id = 'iccvw_shape'><img src='media/iccvw17_pic2.jpg' width="160" height="110"></div>
@@ -1871,7 +1893,7 @@
       </td>
     </tr>
 
-    <tr onmouseout="msc_stop()" onmouseover="msc_start()">
+    <tr onmouseout="msc_stop()" onmouseover="msc_start()" class="publication-item">
       <td width="25%">
         <div class="one">
         <div class="two" id = 'msc_shape'><img src='media/ratio_shoe_shape.jpg' width="160" height="120"></div>
@@ -1915,11 +1937,6 @@
         <td>
           I am fortunate to (co-)mentor some talented and highly motivated students and interns. I have learnt from and gotten inspired by them:
           <ul>
-            <li> <a href="https://jkulhanek.com/"><strong>Jonas Kulhanek</strong></a> (2024-2025): PhD student at Czech Technical University<br>
-              <ul>
-                <li> Internship project at Google: <a href="https://lodge-gs.github.io/">LODGE</a> (NeurIPS'25 <span style="color:#c20000;">spotlight</span> paper)
-                <li> PhD project at ETH Zurich: <a href="https://wild-gaussians.github.io/">WildGaussians</a> (NeurIPS'24)
-              </ul>  
             <li> <a href="https://jkulhanek.com/"><strong>Jonas Kulhanek</strong></a> (2024-2025): PhD student at Czech Technical University<br>
               <ul>
                 <li> Internship project at Google: <a href="https://lodge-gs.github.io/">LODGE</a> (NeurIPS'25 <span style="color:#c20000;">spotlight</span> paper)
@@ -2380,13 +2397,6 @@
     </tr>
   </table>
 
-      <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tr>
-        <td>
-        <heading>Selected Projects</heading>
-        </td>
-      </tr>
-      </table> -->
       <table width="100%" align="center" border="0" cellpadding="20">
         <heading>Selected Projects</heading>
       <tr onmouseout="sharp_stop()" onmouseover="sharp_start()">
@@ -2608,6 +2618,45 @@
     </td>
     </tr>
   </table>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        const showSelectedBtn = document.getElementById('show-selected');
+        const showAllBtn = document.getElementById('show-all');
+        const publications = document.querySelectorAll('.publication-item');
+
+        // Function to show only selected publications
+        function showSelected() {
+            publications.forEach(function(pub) {
+                // Check if the publication has the 'selected-publication' class
+                if (pub.classList.contains('selected-publication')) {
+                    pub.style.display = 'table-row'; // Show it
+                } else {
+                    pub.style.display = 'none'; // Hide it
+                }
+            });
+            // Update button styles
+            showSelectedBtn.classList.add('active');
+            showAllBtn.classList.remove('active');
+        }
+
+        // Function to show all publications
+        function showAll() {
+            publications.forEach(function(pub) {
+                pub.style.display = 'table-row'; // Show all
+            });
+            // Update button styles
+            showAllBtn.classList.add('active');
+            showSelectedBtn.classList.remove('active');
+        }
+
+        // Add click event listeners to the buttons
+        showSelectedBtn.addEventListener('click', showSelected);
+        showAllBtn.addEventListener('click', showAll);
+
+        // Initially, ensure the correct view is displayed (optional, as CSS handles this)
+        showSelected(); 
+    });
+</script>
   </body>
 </html>
 <!--  -->
