@@ -31,10 +31,7 @@
     font-weight: 400;
     }
     heading {
-    /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
     font-family: 'Roboto', sans-serif;
-    /*font-family: 'Avenir Next';*/
-    /*src: url("./fonts/Roboto_Mono_for_Powerline.ttf");*/
     font-size: 24px;
     font-weight: 400;
     }
@@ -83,18 +80,34 @@
         display: table-row; /* Show selected ones */
     }
     .publication-toggle-button {
-        cursor: pointer;
-        color: #1772d0;
-        text-decoration: underline;
+      cursor: pointer;
+      color: #1772d0;
+      text-decoration: none; /* Remove underline by default */
+      padding: 6px 12px; /* Add button-like spacing */
+      border-radius: 15px; /* Create a "pill" shape */
+      transition: all 0.2s ease;
+      font-weight: 500;
     }
+
     .publication-toggle-button:hover {
-        color: #f09228; /* Use the same hover color */
-        text-decoration: underline;
+      background-color: #e9ecef; /* Light background on hover */
+      color: #1772d0;
     }
+
     .publication-toggle-button.active {
-        font-weight: 500; /* Make the active button bold */
-        text-decoration: none;
-    } 
+      background-color: #1772d0; /* Blue background for active state */
+      color: white; /* White text for active state */
+    }
+    .profile-pic {
+      border-radius: 8px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* A more visible base shadow */
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1); /* A smoother, bouncier transition */
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.05) translateY(-5px); /* Enlarge more and lift it up slightly */
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* A much deeper shadow on hover */
+    }
   </style>
   <link rel="icon" type="image/png" href="media/preview.jpg">
   <title>Songyou Peng - Homepage</title>
@@ -116,7 +129,7 @@
           ruthfong at robots dot ox dot ac dot uk--> 
         </p>
         <p>
-          I am a Research Scientist at <a href="https://deepmind.google/"><strong>Google DeepMind</strong></a> in San Francisco, USA, where I work on pre-training and post-training of <a href="https://gemini.google.com">Gemini</a>.
+          I am a Research Scientist at <a href="https://deepmind.google/"><strong>Google DeepMind</strong></a> in San Francisco, USA, where I teach <a href="https://gemini.google.com">Gemini</a> to think in space through both pre-training and post-training.
         </p> 
         <p>
           I received my PhD from <a href="https://ethz.ch/en.html">ETH Zurich</a> and <a href="https://is.tuebingen.mpg.de/">Max Planck Institute for Intelligent Systems</a> under the supervision of <a href="https://inf.ethz.ch/personal/marc.pollefeys/">Marc Pollefeys</a> and <a href="http://www.cvlibs.net/">Andreas Geiger</a>. After the PhD, I worked as a Senior Researcher/Postdoc at <a href="https://ethz.ch/en.html">ETH Zurich</a> for 6 months.
@@ -150,30 +163,9 @@
         </p>
         </td>
         <td width="33%">
-          <img src="media/profile.jpg" width="250" alt="headshot">
-          <!--<div class="one">
-          <div class="two" id="headshot_image"><img src="media/color_headshot.png" width="250" alt="headshot"></div>
-          <img src="media/bw_headshot.png" width="250" alt="headshot">
-          </div>
-          <script type="text/javascript">
-          function headshot_start() {
-          document.getElementById('headshot_image').style.opacity = "1";
-          }
-          function headshot_stop() {
-          document.getElementById('headshot_image').style.opacity = "0";
-          }
-          filters_stop()
-          </script>-->
+          <img src="media/profile.jpg" width="250" alt="headshot" class="profile-pic">
         </td>
-        <!--<td width="33%">
-        <img src="media/bw_headshot.png" width="250">
-        <img src="media/color_headshot.png" width="250">
-        </td>-->
       </tr>
-      <!-- <td width="10%"><a href="adsc.illinois.edu"><img src="media/adsc_logo.png" width="100"></a></td>
-      <td width="10%"><a href="https://www.inria.fr/en/"><img src="media/inria_logo.jpg" width="100"></a></td>
-      <td width="10%"><a href="https://vision.in.tum.de"><img src="media/tum_logo.jpg" width="100"></a></td>
-      <td width="10%"><a href="https://www.vibot.org"><img src="media/vibot_logo_transparent.png" width="50"></a></td> -->
       </table>
 
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
