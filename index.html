@@ -227,6 +227,10 @@
         <td>
           <heading>News</heading>
             <ul>
+              <li><strong>04/2026</strong> <img src="media/logo_vision-banana.png" width="15"><a
+                  href="https://vision-banana.github.io/"> <strong>Vision Banana</strong></a> is out! Check out our <a
+                  href="https://arxiv.org/abs/2604.20329"><strong>tech report</strong></a> and <a
+                  href="https://vision-banana.github.io/"><strong>website</strong></a>.</li>
               <li><strong>03/2026</strong> My PhD thesis received the <img src="media/logo_award.png" width="20"><a href="https://www.ecva.net/index.php#awards"><strong>3DV Outstanding Dissertation Award Honorable Mention</strong></a></strong></a>! You can check out my award talk on <a href="files/talk_3dv2026_award.pdf"><strong>My 10-Year Journey in 3D Vision</strong></a> (<a href="https://youtu.be/sgK4YS0F0CE?si=36Mx0okXGghct3LG">recording</a>).</li>
               <li><strong>02/2026</strong> <a href="https://denghilbert.github.io/selfi/"><strong>Selfi</strong></a> and <a href="???"><strong>Sensor2Sensor</strong></a> are accepted to <strong>CVPR 2026</strong>! Details are coming soon.</li>
               <li><strong>01/2026</strong> <a href="https://real-3dqa.github.io/"><strong>Real-3DQA</strong></a> and <a href="https://ufo-4d.github.io/"><strong>UFO-4D</strong></a> are accepted to <strong>ICLR 2026</strong>! Details are coming soon.</li>
@@ -297,6 +301,47 @@
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     
 
+        <tr onmouseout="vbanana_stop()" onmouseover="vbanana_start()" class="publication-item selected-publication">
+          <td width="25%" style="padding-top: 20; padding-bottom: 0;">
+            <div class="one">
+              <div class="two" id='vbanana_shape'>
+                <video width="160" height="120" muted autoplay loop>
+                  <source src="media/teaser_vbanana.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <img src='media/teaser_vbanana.jpg' width="160" height="120">
+            </div>
+            </div>
+            <script type="text/javascript">
+              function vbanana_start() {
+                document.getElementById('vbanana_shape').style.opacity = "1";
+              }
+              function vbanana_stop() {
+                document.getElementById('vbanana_shape').style.opacity = "0";
+              }
+              vbanana_stop()
+            </script>
+          </td>
+          </script>
+          </td>
+          <td valign="top" width="75%" style="padding-top: 20; padding-bottom: 0;">
+            <a href="https://vision-banana.github.io/">
+              <papertitle>
+                Vision Banana: Image Generators are Generalist Vision
+                Learners
+              </papertitle>
+            </a>
+            <br>
+            <strong>Project Co-Lead</strong>
+            <br>
+            <em>Google DeepMind</em>
+            <br>
+            <a href="https://arxiv.org/abs/2604.20329">tech report</a> |
+            <a href="https://vision-banana.github.io/">website</a>
+          </td>
+        </tr>
+
         <tr onmouseout="gemini_stop()" onmouseover="gemini_start()" class="publication-item selected-publication">  
           <td width="25%" style="padding-top: 20; padding-bottom: 0;">
             <div class="one">
@@ -323,8 +368,9 @@
                 </papertitle>
               </a>
           <br>
-              <strong>Google DeepMind</strong>
-            <br>
+              <strong>Core Contributor</strong>
+              <br>
+              <em>Google DeepMind</em>
             <br>
             <a href="https://arxiv.org/abs/2507.06261">tech report</a> | 
             <a href="https://gemini.google.com">website</a>
