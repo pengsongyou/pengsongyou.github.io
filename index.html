@@ -108,6 +108,9 @@
       transform: scale(1.05) translateY(-5px); /* Enlarge more and lift it up slightly */
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* A much deeper shadow on hover */
     }
+    .compact-after + tr td {
+      padding-top: 5px !important;
+    }
   </style>
   <link rel="icon" type="image/png" href="media/preview.jpg">
   <title>Songyou Peng - Homepage</title>
@@ -233,7 +236,8 @@
                   href="https://vision-banana.github.io/"><strong>website</strong></a>.</li>
               <li><strong>03/2026</strong> My PhD thesis received the <img src="media/logo_award.png" width="20"><a href="https://www.ecva.net/index.php#awards"><strong>3DV Outstanding Dissertation Award Honorable Mention</strong></a></strong></a>! You can check out my award talk on <a href="files/talk_3dv2026_award.pdf"><strong>My 10-Year Journey in 3D Vision</strong></a> (<a href="https://youtu.be/sgK4YS0F0CE?si=36Mx0okXGghct3LG">recording</a>).</li>
               <li><strong>02/2026</strong> <a href="https://denghilbert.github.io/selfi/"><strong>Selfi</strong></a> and <a href="???"><strong>Sensor2Sensor</strong></a> are accepted to <strong>CVPR 2026</strong>! Details are coming soon.</li>
-              <li><strong>01/2026</strong> <a href="https://real-3dqa.github.io/"><strong>Real-3DQA</strong></a> and <a href="https://ufo-4d.github.io/"><strong>UFO-4D</strong></a> are accepted to <strong>ICLR 2026</strong>! Details are coming soon.</li>
+              <li><strong>01/2026</strong> <a href="https://real-3dqa.github.io/"><strong>Real-3DQA</strong></a> and <a
+                  href="https://ufo-4d.github.io/"><strong>UFO-4D</strong></a> are accepted to <strong>ICLR 2026</strong>!</li>
               <li><strong>09/2025</strong> <a href="https://lodge-gs.github.io/"><strong>LODGE</strong></a> is accepted to <strong>NeurIPS 2025</strong> as a <strong><span style="color:#c20000;">spotlight</span></strong>!</li>
               <li><strong>08/2025</strong> I will serve as an Area Chair at <strong>ICLR 2026</strong> and <strong>CVPR 2026</strong>.</li>
               <li><strong>07/2025</strong> Three papers (<a href="https://boyangdeng.com/visual-chronicles/"><strong>Visual Chronicles</strong></a>, <a href="https://cl-splats.github.io/"><strong>CL-Splats</strong></a>, and <a href="https://wildgs-slam.github.io"><strong>SplatTalk</strong></a>) are accepted to <strong>ICCV 2025</strong>!</li>
@@ -342,7 +346,7 @@
           </td>
         </tr>
 
-        <tr onmouseout="gemini_stop()" onmouseover="gemini_start()" class="publication-item selected-publication">  
+        <tr onmouseout="gemini_stop()" onmouseover="gemini_start()" class="publication-item selected-publication compact-after">
           <td width="25%" style="padding-top: 20; padding-bottom: 0;">
             <div class="one">
             <div class="two" id = 'gemini_shape'>
@@ -377,8 +381,138 @@
           </td>
         </tr>
 
+        <tr onmouseout="selfi_stop()" onmouseover="selfi_start()" class="publication-item selected-publication">
+          <td width="25%">
+            <div class="one">
+              <div class="two" id='selfi_shape'>
+                <video width="160" height="160" muted autoplay loop>
+                  <source src="media/teaser_selfi.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <img src='media/teaser_selfi.jpg' width="160" height="160">
+            </div>
+            <script type="text/javascript">
+              function selfi_start() {
+                document.getElementById('selfi_shape').style.opacity = "1";
+              }
+              function selfi_stop() {
+                document.getElementById('selfi_shape').style.opacity = "0";
+              }
+              selfi_stop()
+            </script>
+          </td>
+          <td valign="top" width="75%">
+            <a href="https://denghilbert.github.io/selfi/">
+              <papertitle>
+                Selfi: Self Improving Reconstruction Engine via 3D Geometric Feature Alignment
+              </papertitle>
+            </a>
+            <br>
+            <a href="https://denghilbert.github.io/">Youming Deng</a>,
+            <strong>Songyou Peng</strong>,
+            <a href="https://www.junyi42.com/">Junyi Zhang</a>,
+            <a href="https://kathrynheal.com/">Kathryn Heal</a>,
+            <a href="https://www.kevinkingo.com/">Tiancheng Sun</a>,
+            <a href="https://scholar.google.com/citations?user=G6eENb8AAAAJ&hl=en">John Flynn</a>,
+            <a href="https://www.cs.cornell.edu/~srm/">Steve Marschner</a>,
+            <a href="https://people.csail.mit.edu/lrchai/">Lucy Chai</a>
+            <br>
+            <em>Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>)</em>, 2026 <strong>(<span
+                style="color:#c20000;">Oral</span>)</strong>
+            <br>
+            <a href="https://arxiv.org/abs/2512.08930">paper</a> |
+            <a href="https://denghilbert.github.io/selfi/">project page</a>
+            <p></p>
+            Teach a 3D foundation model to improve itself. No ground truth needed.
+            <p></p>
+          </td>
+        </tr>
+        
+        <tr class="publication-item selected-publication">
+          <td width="25%">
+            <div class="one">
+              <img src='media/teaser_logo_3dqa.png' width="160" height="160">
+            </div>
+          </td>
+          <td valign="top" width="75%">
+            <a href="https://real-3dqa.github.io/">
+              <papertitle>
+                Do 3D Large Language Models Really Understand 3D Spatial Relationships?
+              </papertitle>
+            </a>
+            <br>
+            <a href="https://xianzhengma.github.io/">Xianzheng Ma</a>*,
+            <a href="https://taosun.io/">Tao Sun</a>*,
+            <a href="https://chenusc11.github.io/">Shuai Chen</a>,
+            <a href="https://yashbhalgat.github.io/">Yash Bhalgat</a>,
+            <a href="https://jindonggu.github.io/">Jindong Gu</a>,
+            <a href="https://angelxuanchang.github.io/">Angel X Chang</a>,
+            <a href="https://ir0.github.io/">Iro Armeni</a>,
+            <a href="https://scholar.google.de/citations?user=n9nXAPcAAAAJ">Iro Laina</a>,
+            <strong>Songyou Peng</strong>&dagger;,
+            <a href="https://www.robots.ox.ac.uk/~victor/">Victor Adrian Prisacariu</a>&dagger;
+            <br>
+            <em>International Conference on Learning Representations (<strong>ICLR</strong>)</em>, 2026
+            <br>
+            (* equal contribution, &dagger; equal supervision)
+            <br>
+            <a href="http://arxiv.org/abs/2603.23523">paper</a> |
+            <a href="https://real-3dqa.github.io/">project page</a> |
+            <a href="https://github.com/xianzhengma/Real-3DQA">code</a> |
+            <a href="https://huggingface.co/datasets/Oliver-Ma/Real-3DQA">data</a>
+            <p></p>
+            Your 3D-LLM isn't understanding 3D. It might be just guessing without seeing.
+            <p></p>
+          </td>
+        </tr>
+        
+        <tr onmouseout="ufo_stop()" onmouseover="ufo_start()" class="publication-item">
+          <td width="25%">
+            <div class="one">
+              <div class="two" id='ufo_shape'>
+                <img src="media/teaser_ufo.gif" width="160" height="160">
+              </div>
+              <img src='media/teaser_ufo.jpg' width="160" height="160">
+            </div>
+            <script type="text/javascript">
+              function ufo_start() {
+                document.getElementById('ufo_shape').style.opacity = "1";
+              }
+              function ufo_stop() {
+                document.getElementById('ufo_shape').style.opacity = "0";
+              }
+              ufo_stop()
+            </script>
+          </td>
+          <td valign="top" width="75%">
+            <a href="https://ufo-4d.github.io/">
+              <papertitle>
+                UFO-4D: Unposed Feedforward 4D Reconstruction from Two Images
+              </papertitle>
+            </a>
+            <br>
+            <a href="https://hurjunhwa.github.io/">Junhwa Hur</a>,
+            <a href="https://scholar.google.com/citations?user=LQvi5XAAAAAJ&hl=en">Charles Herrmann</a>,
+            <strong>Songyou Peng</strong>,
+            <a href="https://henzler.github.io/">Philipp Henzler</a>,
+            <a href="https://mazeyu.github.io/">Zeyu Ma</a>,
+            <a href="https://zickler.seas.harvard.edu/">Todd Zickler</a>,
+            <a href="https://deqings.github.io/">Deqing Sun</a>
+            <br>
+            <em>International Conference on Learning Representations (<strong>ICLR</strong>)</em>, 2026
+            <br>
+            <a href="https://arxiv.org/abs/2602.24290">paper</a> |
+            <a href="https://ufo-4d.github.io/">project page</a> |
+            <a href="https://github.com/ufo-4d/ufo-4d">code</a>
+            <p></p>
+            Feedforward 4D reconstruction from just two unposed images.
+            <p></p>
+          </td>
+        </tr>
+
         <tr onmouseout="lodge_stop()" onmouseover="lodge_start()" class="publication-item">  
-          <td width="25%" style="padding-top: 0;">
+          <td width="25%">
             <div class="one">
             <div class="two" id = 'lodge_shape'>
             <video  width="160" height="160" muted autoplay loop>
@@ -394,10 +528,9 @@
             document.getElementById('lodge_shape').style.opacity = "0"; 
             }
             lodge_stop()
-            </script>
-            </script>
+</script>
           </td>
-          <td valign="top" width="75%" style="padding-top: 0;">
+          <td valign="top" width="75%">
               <a href="https://lodge-gs.github.io/">
                 <papertitle>
                   LODGE: Level-of-Detail Large-Scale Gaussian Splatting with Efficient Rendering
@@ -429,7 +562,6 @@
                 <div class="two" id = 'chronicles_shape'>
                   <img src='media/teaser_chronicles_2.jpg' width="160" height="160"></div>
                   <img src='media/teaser_chronicles_1.jpg' width="160" height="160"></div>
-                  </div>
               <script type="text/javascript">
               function chronicles_start() { 
               document.getElementById('chronicles_shape').style.opacity = "1";
@@ -438,8 +570,7 @@
               document.getElementById('chronicles_shape').style.opacity = "0"; 
               }
               chronicles_stop()
-              </script>
-              </script>
+</script>
             </td>
           <td valign="top" width="75%">
               <a href="https://boyangdeng.com/visual-chronicles/">
@@ -466,7 +597,7 @@
           </td>
         </tr>
 
-        <tr onmouseout="clsplats_stop()" onmouseover="clsplats_start()" class="publication-item selected-publication">  
+        <tr onmouseout="clsplats_stop()" onmouseover="clsplats_start()" class="publication-item">
           <td width="25%">
             <div class="one">
             <div class="two" id = 'clsplats_shape'>
@@ -1790,7 +1921,7 @@
 
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
-    <tr onmouseout="pami_stop()" onmouseover="pami_start()" class="publication-item selected-publication">
+    <tr onmouseout="pami_stop()" onmouseover="pami_start()" class="publication-item">
       <td width="25%">
         <div class="one">
         <div class="two" id = 'pami_shape'>
