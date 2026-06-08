@@ -230,12 +230,14 @@
         <td>
           <heading>News</heading>
             <ul>
+              <li><strong>06/2026</strong> <a href="https://real-3dqa.github.io/"><strong>Real-3DQA</strong></a> received the <img src="media/logo_award.png" width="20"><a href="https://3d-llm-vla.github.io/"><strong>Best Paper Runner-up Award</strong></a> at the 3D-LLM/VLA Workshop at CVPR 2026!</li>
               <li><strong>04/2026</strong> <img src="media/logo_vision-banana.png" width="15"><a
                   href="https://vision-banana.github.io/"> <strong>Vision Banana</strong></a> is out! Check out our <a
                   href="https://arxiv.org/abs/2604.20329"><strong>tech report</strong></a> and <a
-                  href="https://vision-banana.github.io/"><strong>website</strong></a>.</li>
+                  href="https://vision-banana.github.io/"><strong>website</strong></a>. You can also find the <a
+                  href="files/talk_vision_banana.pdf"><strong>slides for my talk</strong></a>.</li>
               <li><strong>03/2026</strong> My PhD thesis received the <img src="media/logo_award.png" width="20"><a href="https://www.ecva.net/index.php#awards"><strong>3DV Outstanding Dissertation Award Honorable Mention</strong></a></strong></a>! You can check out my award talk on <a href="files/talk_3dv2026_award.pdf"><strong>My 10-Year Journey in 3D Vision</strong></a> (<a href="https://youtu.be/sgK4YS0F0CE?si=36Mx0okXGghct3LG">recording</a>).</li>
-              <li><strong>02/2026</strong> <a href="https://denghilbert.github.io/selfi/"><strong>Selfi</strong></a> and <a href="???"><strong>Sensor2Sensor</strong></a> are accepted to <strong>CVPR 2026</strong>! Details are coming soon.</li>
+              <li><strong>02/2026</strong> <a href="https://denghilbert.github.io/selfi/"><strong>Selfi</strong></a> (<strong><span style="color:#c20000;">Oral</span></strong>) and <a href="https://arxiv.org/abs/2605.22809"><strong>Sensor2Sensor</strong></a> are accepted to <strong>CVPR 2026</strong>!</li>
               <li><strong>01/2026</strong> <a href="https://real-3dqa.github.io/"><strong>Real-3DQA</strong></a> and <a
                   href="https://ufo-4d.github.io/"><strong>UFO-4D</strong></a> are accepted to <strong>ICLR 2026</strong>!</li>
               <li><strong>09/2025</strong> <a href="https://lodge-gs.github.io/"><strong>LODGE</strong></a> is accepted to <strong>NeurIPS 2025</strong> as a <strong><span style="color:#c20000;">spotlight</span></strong>!</li>
@@ -428,6 +430,59 @@
             <p></p>
           </td>
         </tr>
+
+        <tr onmouseout="sensor2sensor_stop()" onmouseover="sensor2sensor_start()" class="publication-item">
+          <td width="25%">
+            <div class="one">
+              <div class="two" id='sensor2sensor_shape'>
+                <video width="160" height="160" muted autoplay loop>
+                  <source src="media/teaser_sensor2sensor.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <img src='media/teaser_sensor2sensor.jpg' width="160" height="160">
+            </div>
+            <script type="text/javascript">
+              function sensor2sensor_start() {
+                document.getElementById('sensor2sensor_shape').style.opacity = "1";
+              }
+              function sensor2sensor_stop() {
+                document.getElementById('sensor2sensor_shape').style.opacity = "0";
+              }
+              sensor2sensor_stop()
+            </script>
+          </td>
+          <td valign="top" width="75%">
+            <a href="https://arxiv.org/abs/2605.22809">
+              <papertitle>
+                Sensor2Sensor: Cross-Embodiment Sensor Conversion for Autonomous Driving
+              </papertitle>
+            </a>
+            <br>
+            <a href="https://jiahaoplus.github.io/">Jiahao Wang</a>,
+            <a href="https://sites.google.com/corp/view/bosun/home">Bo Sun</a>,
+            <a href="https://www.linkedin.com/in/yijingbai/">Yijing Bai</a>,
+            <a href="https://casser.io/">Vincent Casser</a>,
+            <strong>Songyou Peng</strong>,
+            <a href="https://www.linkedin.com/in/zehaozhu/">Zehao Zhu</a>,
+            <a href="https://shihmengli.github.io/">Meng-Li Shih</a>,
+            <a href="https://www.linkedin.com/in/xander-masotto-a229b856/">Xander Masotto</a>,
+            <a href="https://lemonatsu.github.io/">Shih-Yang Su</a>,
+            <a href="http://kanaad.me/">Kanaad V Parvate</a>,
+            <a href="https://www.linkedin.com/in/tiancheng-ge-514133121/">Tiancheng Ge</a>,
+            <a href="https://www.linkedin.com/in/linn-bieske-189b9b138/">Linn Bieske</a>,
+            <a href="https://www.linkedin.com/in/dragomiranguelov/">Dragomir Anguelov</a>,
+            <a href="https://www.linkedin.com/in/mingxing-tan-2724551b/">Mingxing Tan</a>,
+            <a href="https://www.maxjiang.ml/">Chiyu "Max" Jiang</a>
+            <br>
+            <em>Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>)</em>, 2026
+            <br>
+            <a href="https://arxiv.org/abs/2605.22809">paper</a>
+            <p></p>
+            A prototype for the <a href="https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation/">Waymo World Model</a>, translating in-the-wild monocular videos into high-fidelity multi-modal sensor logs.
+            <p></p>
+          </td>
+        </tr>
         
         <tr class="publication-item selected-publication">
           <td width="25%">
@@ -454,6 +509,8 @@
             <a href="https://www.robots.ox.ac.uk/~victor/">Victor Adrian Prisacariu</a>&dagger;
             <br>
             <em>International Conference on Learning Representations (<strong>ICLR</strong>)</em>, 2026
+            <br>
+            <b><span style="color:#c20000;">Best Paper Runner-up Award at the 3D-LLM/VLA Workshop at CVPR 2026</span></b>
             <br>
             (* equal contribution, &dagger; equal supervision)
             <br>
@@ -2118,12 +2175,12 @@
               <br>
             <li> <a href="https://denghilbert.github.io/"><strong>Youming Deng</strong></a> (2025): PhD student at Cornell University<br>
               <ul>
-                <li> Internship project at Google: <a href="https://denghilbert.github.io/selfi/">Selfi</a> (CVPR'26)
+                <li> Internship project at Google: <a href="https://denghilbert.github.io/selfi/">Selfi</a> (CVPR'26 <span style="color:#c20000;">Oral</span>)
               </ul>
               <br>
             <li> <a href="https://jiahaoplus.github.io/"><strong>Jiahao Wang</strong></a> (2025): PhD student at John Hopkins University<br>
               <ul>
-                <li> Internship project at Waymo: <a href="???">Sensor2Sensor</a> (CVPR'26)
+                <li> Internship project at Waymo: <a href="https://arxiv.org/abs/2605.22809">Sensor2Sensor</a> (CVPR'26)
               </ul>
               <br>
             <li> <a href="https://niujinshuchong.github.io/"><strong>Zehao Yu</strong></a> (2025): PhD student at University of Tübingen<br>
@@ -2220,6 +2277,32 @@
     <heading>Invited Talks</heading>
     <!-- <p></p> -->
     <br><br><br>
+
+    <tr onmouseout="talk_vision_banana_stop()" onmouseover="talk_vision_banana_start()">  
+      <td width="25%">
+        <div class="one">
+        <div class="two" id = 'talk_vision_banana_shape'>
+        <img src='media/talk_vision_banana.jpg' width="180" height="100"></div>
+        <img src='media/talk_vision_banana.jpg' width="180" height="100"></div>
+        </div>
+        <script type="text/javascript">
+        function talk_vision_banana_start() { 
+        document.getElementById('talk_vision_banana_shape').style.opacity = "1";
+        }
+        function talk_vision_banana_stop() { 
+        document.getElementById('talk_vision_banana_shape').style.opacity = "0"; 
+        }
+        talk_vision_banana_stop()
+        </script>
+      </td>
+      <td valign="top" width="75%">
+          <a href="files/talk_vision_banana.pdf">
+            <papertitle>Vision Banana: Image Generators are Generalist Vision Learners</papertitle></a>
+      <br>
+          Invited talk at the <a href="https://scene-understanding.com/"><strong>3DSUN Workshop</strong></a> at <strong>CVPR</strong>, 2026 <br>
+          <a href="files/talk_vision_banana.pdf">slides</a>
+      </td>
+    </tr>
 
         <tr onmouseout="award3dv_stop()" onmouseover="award3dv_start()">  
       <td width="25%">
